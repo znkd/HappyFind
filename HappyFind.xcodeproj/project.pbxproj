@@ -18,7 +18,6 @@
 		564C0F6815DADBA0003DEE36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564C0F6715DADBA0003DEE36 /* Foundation.framework */; };
 		564C0F6A15DADBA0003DEE36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564C0F6915DADBA0003DEE36 /* CoreGraphics.framework */; };
 		564C0F6C15DADBA0003DEE36 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564C0F6B15DADBA0003DEE36 /* GameKit.framework */; };
-		564C0F7015DADBA0003DEE36 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 564C0F6F15DADBA0003DEE36 /* Default.png */; };
 		564C0F7215DADBA0003DEE36 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 564C0F7115DADBA0003DEE36 /* Default-Landscape~ipad.png */; };
 		564C0F7415DADBA0003DEE36 /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = 564C0F7315DADBA0003DEE36 /* fps_images.png */; };
 		564C0F7615DADBA0003DEE36 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 564C0F7515DADBA0003DEE36 /* fps_images-hd.png */; };
@@ -1133,7 +1132,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				562FEC6C15F79ED800A739ED /* room.ccbi in Resources */,
-				564C0F7015DADBA0003DEE36 /* Default.png in Resources */,
 				564C0F7215DADBA0003DEE36 /* Default-Landscape~ipad.png in Resources */,
 				564C0F7415DADBA0003DEE36 /* fps_images.png in Resources */,
 				564C0F7615DADBA0003DEE36 /* fps_images-hd.png in Resources */,
