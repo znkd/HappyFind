@@ -179,6 +179,7 @@
 		825494CD1695913500A9C536 /* CCNode+CCBRelativePositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96DD1693DA990084645C /* CCNode+CCBRelativePositioning.m */; };
 		825494CE1695917900A9C536 /* CCBsequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96D91693DA990084645C /* CCBsequence.m */; };
 		825494CF169591B900A9C536 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 824E59811691F4DF0033E997 /* Default-Landscape~ipad.png */; };
+		825494D81695BFE800A9C536 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 825494D71695BFE800A9C536 /* Settings.m */; };
 		82FEF7DF169457C900729E6D /* MenuOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FEF7DE169457C900729E6D /* MenuOptions.m */; };
 		82FEF7E9169468F100729E6D /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FEF7E8169468F100729E6D /* About.m */; };
 /* End PBXBuildFile section */
@@ -525,6 +526,8 @@
 		56AF297E160E195600EBA5F0 /* sprite+texture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "sprite+texture.m"; sourceTree = "<group>"; };
 		824E59811691F4DF0033E997 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "Resources/cocosbuilder/Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		825494C8169590BC00A9C536 /* ccb.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = ccb.zip; sourceTree = "<group>"; };
+		825494D61695BFE800A9C536 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		825494D71695BFE800A9C536 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		825A96D41693DA990084645C /* CCBAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBAnimationManager.h; sourceTree = "<group>"; };
 		825A96D51693DA990084645C /* CCBAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBAnimationManager.m; sourceTree = "<group>"; };
 		825A96D61693DA990084645C /* CCBKeyframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBKeyframe.h; sourceTree = "<group>"; };
@@ -605,6 +608,7 @@
 		564C0F6D15DADBA0003DEE36 /* HappyFind */ = {
 			isa = PBXGroup;
 			children = (
+				825494D41695BF8800A9C536 /* Settings */,
 				82FEF7E6169468CC00729E6D /* About */,
 				82FEF7DC1694578900729E6D /* MenuOptions */,
 				56AF297B160E195600EBA5F0 /* cocos2dExtension */,
@@ -1222,6 +1226,15 @@
 			name = cocos2dExtension;
 			sourceTree = "<group>";
 		};
+		825494D41695BF8800A9C536 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				825494D61695BFE800A9C536 /* Settings.h */,
+				825494D71695BFE800A9C536 /* Settings.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		82FEF7DC1694578900729E6D /* MenuOptions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1461,6 +1474,7 @@
 				56992AE51693C6160045BABF /* ASIInputStream.m in Sources */,
 				56992AE61693C6160045BABF /* ASINetworkQueue.m in Sources */,
 				56992AF01693C7940045BABF /* Reachability.m in Sources */,
+				825494D81695BFE800A9C536 /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
