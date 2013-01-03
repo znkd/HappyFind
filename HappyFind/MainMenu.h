@@ -10,8 +10,6 @@
 #import "cocos2d.h"
 
 @interface MainMenu : CCNode {
-    CCSprite*   m_titleLogo;
-    CCSprite*   m_play;
     CCSprite*   m_options;
     CCSprite*   m_twitter;
     CCSprite*   m_facebook;

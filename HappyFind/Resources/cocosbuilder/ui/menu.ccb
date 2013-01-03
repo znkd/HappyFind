@@ -433,9 +433,9 @@
 						<key>displayName</key>
 						<string>LeftSprit</string>
 						<key>memberVarAssignmentName</key>
-						<string>m_titleLogo</string>
+						<string></string>
 						<key>memberVarAssignmentType</key>
-						<integer>1</integer>
+						<integer>0</integer>
 						<key>properties</key>
 						<array>
 							<dict>
@@ -567,9 +567,9 @@
 								<key>displayName</key>
 								<string>Play</string>
 								<key>memberVarAssignmentName</key>
-								<string>m_play</string>
+								<string></string>
 								<key>memberVarAssignmentType</key>
-								<integer>1</integer>
+								<integer>0</integer>
 								<key>properties</key>
 								<array>
 									<dict>

@@ -13,6 +13,7 @@
 #import "GameCtl.h"
 #import "CCBReader.h"
 
+#import "OffLineRes.h"
 @implementation AppController
 
 @synthesize window=window_, navController=navController_, director=director_;
@@ -36,6 +37,8 @@
 
 	director_.wantsFullScreenLayout = YES;
 
+    [CCBFileUtils sharedFileUtils]; 
+    
 	// Display FSP and SPF
 	[director_ setDisplayStats:YES];
 
@@ -60,7 +63,7 @@
 	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
 	// You can change anytime.
 	[CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
-
+    
 	// If the 1st suffix is not found and if fallback is enabled then fallback suffixes are going to searched. If none is found, it will try with the name without suffix.
 	// On iPad HD  : "-ipadhd", "-ipad",  "-hd"
 	// On iPad     : "-ipad", "-hd"
@@ -77,9 +80,6 @@
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
 	//[director_ pushScene: [IntroLayer scene]]; 
     
-    //unzip
-    //[CCBReader unzipResources:@"ccb.zip"];
-    
     m_gameCtl = [GameCtl sharedGameCtl];
 	[[CCDirector sharedDirector] runWithScene:[CCBReader sceneWithNodeGraphFromFile:@"menu.ccbi"]];
     
@@ -93,6 +93,9 @@
 	
 	// make main window visible
 	[window_ makeKeyAndVisible];
+    
+    OffLineRes*     offLineRes = [[OffLineRes alloc] init];
+    [offLineRes offLineResStart:0];
 	
 	return YES;
 }
