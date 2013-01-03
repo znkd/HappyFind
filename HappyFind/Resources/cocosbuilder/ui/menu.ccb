@@ -363,7 +363,7 @@
 								<key>customClass</key>
 								<string></string>
 								<key>displayName</key>
-								<string>CCSprite</string>
+								<string>HappySprite</string>
 								<key>memberVarAssignmentName</key>
 								<string></string>
 								<key>memberVarAssignmentType</key>
@@ -431,7 +431,7 @@
 						<key>customClass</key>
 						<string></string>
 						<key>displayName</key>
-						<string>CCSprite</string>
+						<string>LeftSprit</string>
 						<key>memberVarAssignmentName</key>
 						<string>m_titleLogo</string>
 						<key>memberVarAssignmentType</key>
@@ -441,8 +441,8 @@
 							<dict>
 								<key>baseValue</key>
 								<array>
-									<real>-90</real>
-									<real>864</real>
+									<real>152</real>
+									<real>588</real>
 								</array>
 								<key>name</key>
 								<string>position</string>
@@ -499,8 +499,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>seqExpanded</key>
-						<true/>
 					</dict>
 					<dict>
 						<key>baseClass</key>
@@ -567,7 +565,7 @@
 								<key>customClass</key>
 								<string></string>
 								<key>displayName</key>
-								<string>CCMenuItemImage</string>
+								<string>Play</string>
 								<key>memberVarAssignmentName</key>
 								<string>m_play</string>
 								<key>memberVarAssignmentType</key>
@@ -577,8 +575,8 @@
 									<dict>
 										<key>baseValue</key>
 										<array>
-											<real>556</real>
-											<real>34</real>
+											<real>550</real>
+											<real>188</real>
 										</array>
 										<key>name</key>
 										<string>position</string>
@@ -839,7 +837,7 @@
 								<key>customClass</key>
 								<string></string>
 								<key>displayName</key>
-								<string>CCSprite</string>
+								<string>FindSprite</string>
 								<key>memberVarAssignmentName</key>
 								<string></string>
 								<key>memberVarAssignmentType</key>
@@ -902,12 +900,14 @@
 										</array>
 									</dict>
 								</array>
+								<key>seqExpanded</key>
+								<true/>
 							</dict>
 						</array>
 						<key>customClass</key>
 						<string></string>
 						<key>displayName</key>
-						<string>CCSprite</string>
+						<string>RightSprit</string>
 						<key>memberVarAssignmentName</key>
 						<string></string>
 						<key>memberVarAssignmentType</key>
@@ -917,8 +917,8 @@
 							<dict>
 								<key>baseValue</key>
 								<array>
-									<real>1112</real>
 									<real>854</real>
+									<real>518</real>
 								</array>
 								<key>name</key>
 								<string>position</string>
@@ -982,7 +982,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCSprite</string>
+				<string>Background</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -1029,10 +1029,117 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ui/mainmenubk.png</string>
+							<string>Default-Landscape~ipad.png</string>
 						</array>
 					</dict>
 				</array>
+			</dict>
+			<dict>
+				<key>animatedProperties</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>position</key>
+						<dict>
+							<key>keyframes</key>
+							<array>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>position</string>
+									<key>time</key>
+									<real>0.0</real>
+									<key>type</key>
+									<integer>3</integer>
+									<key>value</key>
+									<array>
+										<real>0.0</real>
+										<real>-120</real>
+									</array>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>time</key>
+									<real>0.60000002384185791</real>
+									<key>type</key>
+									<integer>3</integer>
+									<key>value</key>
+									<array>
+										<real>0.0</real>
+										<real>0.0</real>
+									</array>
+								</dict>
+							</array>
+							<key>name</key>
+							<string>position</string>
+							<key>type</key>
+							<integer>3</integer>
+						</dict>
+					</dict>
+				</dict>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCBFile</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>baseValue</key>
+						<array>
+							<real>0.0</real>
+							<real>-120</real>
+						</array>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>options.ccb</string>
+					</dict>
+				</array>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -1146,7 +1253,7 @@
 			<key>autoPlay</key>
 			<true/>
 			<key>chainedSequenceId</key>
-			<integer>0</integer>
+			<integer>-1</integer>
 			<key>length</key>
 			<real>1</real>
 			<key>name</key>
@@ -1158,7 +1265,7 @@
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
-			<real>128</real>
+			<real>512</real>
 			<key>sequenceId</key>
 			<integer>0</integer>
 		</dict>

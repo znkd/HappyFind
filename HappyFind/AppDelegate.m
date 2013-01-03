@@ -77,6 +77,9 @@
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
 	//[director_ pushScene: [IntroLayer scene]]; 
     
+    //unzip
+    //[CCBReader unzipResources:@"ccb.zip"];
+    
     m_gameCtl = [GameCtl sharedGameCtl];
 	[[CCDirector sharedDirector] runWithScene:[CCBReader sceneWithNodeGraphFromFile:@"menu.ccbi"]];
     

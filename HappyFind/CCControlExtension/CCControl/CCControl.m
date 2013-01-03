@@ -138,7 +138,7 @@
         self.isTouchEnabled         = YES;
 #elif __MAC_OS_X_VERSION_MAX_ALLOWED
         // Enabled the mouse event
-		self.isMouseEnabled         = YES;
+		self.mouseEnabled         = YES;
 #endif
         
         // Initialise instance variables

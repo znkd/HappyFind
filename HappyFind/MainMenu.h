@@ -12,6 +12,10 @@
 @interface MainMenu : CCNode {
     CCSprite*   m_titleLogo;
     CCSprite*   m_play;
+    CCSprite*   m_options;
+    CCSprite*   m_twitter;
+    CCSprite*   m_facebook;
+    CCSprite*   m_about;
 }
 
 @end
