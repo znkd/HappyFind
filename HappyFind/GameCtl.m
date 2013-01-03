@@ -6,7 +6,7 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 #import "GameCtl.h"
-
+#import "CCBReader.h"
 
 @implementation GameCtl
 
@@ -18,6 +18,14 @@ static GameCtl* _sharedGameCtl = nil;
 {
     if (!_sharedGameCtl) {
         _sharedGameCtl = [[self alloc] init];
+        
+        NSArray*    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString*   docPath = [paths objectAtIndex:0];
+        if(![[NSFileManager defaultManager] fileExistsAtPath:[docPath stringByAppendingPathComponent:@"ccb"]])
+        {
+            [CCBReader unzipResources:@"ccb.zip"];
+        }
+
     }
     return _sharedGameCtl;
 }
@@ -30,7 +38,10 @@ static GameCtl* _sharedGameCtl = nil;
     {
         m_stagePathAry = [[NSMutableArray alloc]init];
         
-        NSString*  resPictureRoot =  [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"iPad"];
+        
+        NSArray*    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString*   docPath = [paths objectAtIndex:0];
+        NSString*  resPictureRoot =  [docPath stringByAppendingPathComponent:@"iPad"];
         
         //get stage folder
         for(int iCnt =0;;iCnt++)
@@ -56,6 +67,7 @@ static GameCtl* _sharedGameCtl = nil;
 -(void) dealloc
 {
     [m_stagePathAry release];
+    [m_difGameSceneDic release];
     [super dealloc];
 }
 

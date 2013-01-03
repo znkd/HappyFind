@@ -16,12 +16,7 @@
 // initialization is needed, leave this method out.
 - (void) didLoadFromCCB
 {    
-    CCMoveTo* move = [CCMoveTo actionWithDuration:1 position:CGPointMake(216, 596)];
 
-    [m_titleLogo runAction:move];
-    
-    CCMoveTo* move2 = [CCMoveTo actionWithDuration:1 position:CGPointMake(518, 120)];
-    [m_play runAction:move2];
     
 }
 
