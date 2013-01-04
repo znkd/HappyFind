@@ -13,7 +13,7 @@
 #import "GameCtl.h"
 #import "CCBReader.h"
 
-#import "OffLineRes.h"
+
 @implementation AppController
 
 @synthesize window=window_, navController=navController_, director=director_;
@@ -81,7 +81,7 @@
 	//[director_ pushScene: [IntroLayer scene]]; 
     
     m_gameCtl = [GameCtl sharedGameCtl];
-	[[CCDirector sharedDirector] runWithScene:[CCBReader sceneWithNodeGraphFromFile:@"menu.ccbi"]];
+	[[CCDirector sharedDirector] runWithScene:[CCBReader sceneWithNodeGraphFromFile:@"loading.ccbi"]];
     
 	// Create a Navigation Controller with the Director
 	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];
@@ -94,9 +94,6 @@
 	// make main window visible
 	[window_ makeKeyAndVisible];
     
-    OffLineRes*     offLineRes = [[OffLineRes alloc] init];
-    [offLineRes offLineResStart:0];
-	
 	return YES;
 }
 

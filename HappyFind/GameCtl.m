@@ -7,6 +7,7 @@
 //
 #import "GameCtl.h"
 #import "CCBReader.h"
+#import "OffLineRes.h"
 
 @implementation GameCtl
 
@@ -20,9 +21,9 @@ static GameCtl* _sharedGameCtl = nil;
         _sharedGameCtl = [[self alloc] init];
         
         NSArray*    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString*   docPath = [paths objectAtIndex:0];
+        NSString*   docPath = [paths objectAtIndex:0];        
         if(![[NSFileManager defaultManager] fileExistsAtPath:[docPath stringByAppendingPathComponent:@"ccb"]])
-        {
+        {//the first startup from app folder to get ccb.zip
             [CCBReader unzipResources:@"ccb.zip"];
         }
 

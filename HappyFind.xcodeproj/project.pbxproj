@@ -169,17 +169,16 @@
 		56992AFA1693CDE90045BABF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56992AF91693CDE90045BABF /* libxml2.dylib */; };
 		56992AFC1693CDFA0045BABF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56992AFB1693CDFA0045BABF /* SystemConfiguration.framework */; };
 		56992AFE1693CE0D0045BABF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56992AFD1693CE0D0045BABF /* MobileCoreServices.framework */; };
-		56A6569715EC056F001EFCA4 /* ding_add.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56A6569515EC056F001EFCA4 /* ding_add.mp3 */; };
-		56A6569815EC056F001EFCA4 /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56A6569615EC056F001EFCA4 /* error.mp3 */; };
 		56AF297F160E195600EBA5F0 /* sprite+texture.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AF297E160E195600EBA5F0 /* sprite+texture.m */; };
+		56BE0998169681E4001D1FD2 /* version.txt in Resources */ = {isa = PBXBuildFile; fileRef = 56BE0997169681E4001D1FD2 /* version.txt */; };
+		56BE099C169696CF001D1FD2 /* Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BE099B169696CF001D1FD2 /* Loading.m */; };
+		56BE099F1696E8CC001D1FD2 /* CCBResDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BE099E1696E8CC001D1FD2 /* CCBResDelegate.m */; };
 		825494C9169590BC00A9C536 /* ccb.zip in Resources */ = {isa = PBXBuildFile; fileRef = 825494C8169590BC00A9C536 /* ccb.zip */; };
 		825494CA1695913500A9C536 /* CCBAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96D51693DA990084645C /* CCBAnimationManager.m */; };
 		825494CB1695913500A9C536 /* CCBKeyframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96D71693DA990084645C /* CCBKeyframe.m */; };
 		825494CC1695913500A9C536 /* CCBSequenceProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96DB1693DA990084645C /* CCBSequenceProperty.m */; };
 		825494CD1695913500A9C536 /* CCNode+CCBRelativePositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96DD1693DA990084645C /* CCNode+CCBRelativePositioning.m */; };
 		825494CE1695917900A9C536 /* CCBsequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96D91693DA990084645C /* CCBsequence.m */; };
-		825494CF169591B900A9C536 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 824E59811691F4DF0033E997 /* Default-Landscape~ipad.png */; };
-		825494D81695BFE800A9C536 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 825494D71695BFE800A9C536 /* Settings.m */; };
 		82FEF7DF169457C900729E6D /* MenuOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FEF7DE169457C900729E6D /* MenuOptions.m */; };
 		82FEF7E9169468F100729E6D /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FEF7E8169468F100729E6D /* About.m */; };
 /* End PBXBuildFile section */
@@ -194,7 +193,6 @@
 		564C0F6515DADBA0003DEE36 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		564C0F6715DADBA0003DEE36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		564C0F6915DADBA0003DEE36 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		564C0F6F15DADBA0003DEE36 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		564C0F7315DADBA0003DEE36 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
 		564C0F7515DADBA0003DEE36 /* fps_images-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fps_images-hd.png"; path = "Resources/fps_images-hd.png"; sourceTree = "<group>"; };
 		564C0F7715DADBA0003DEE36 /* fps_images-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fps_images-ipadhd.png"; path = "Resources/fps_images-ipadhd.png"; sourceTree = "<group>"; };
@@ -520,10 +518,15 @@
 		56992AF91693CDE90045BABF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		56992AFB1693CDFA0045BABF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		56992AFD1693CE0D0045BABF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		56A6569515EC056F001EFCA4 /* ding_add.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ding_add.mp3; path = Resources/ding_add.mp3; sourceTree = "<group>"; };
-		56A6569615EC056F001EFCA4 /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = error.mp3; path = Resources/error.mp3; sourceTree = "<group>"; };
 		56AF297D160E195600EBA5F0 /* sprite+texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sprite+texture.h"; sourceTree = "<group>"; };
 		56AF297E160E195600EBA5F0 /* sprite+texture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "sprite+texture.m"; sourceTree = "<group>"; };
+		56BE0997169681E4001D1FD2 /* version.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = version.txt; sourceTree = "<group>"; };
+		56BE099A169696CF001D1FD2 /* Loading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loading.h; sourceTree = "<group>"; };
+		56BE099B169696CF001D1FD2 /* Loading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Loading.m; sourceTree = "<group>"; };
+		56BE099D1696E8CC001D1FD2 /* CCBResDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBResDelegate.h; sourceTree = "<group>"; };
+		56BE099E1696E8CC001D1FD2 /* CCBResDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBResDelegate.m; sourceTree = "<group>"; };
+		56BE09A51697083B001D1FD2 /* ding_add.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ding_add.mp3; path = Resources/cocosbuilder/ding_add.mp3; sourceTree = "<group>"; };
+		56BE09A61697083B001D1FD2 /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = error.mp3; path = Resources/cocosbuilder/error.mp3; sourceTree = "<group>"; };
 		824E59811691F4DF0033E997 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "Resources/cocosbuilder/Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		825494C8169590BC00A9C536 /* ccb.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = ccb.zip; sourceTree = "<group>"; };
 		825494D61695BFE800A9C536 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
@@ -609,6 +612,7 @@
 			isa = PBXGroup;
 			children = (
 				825494D41695BF8800A9C536 /* Settings */,
+				56BE099916968AFE001D1FD2 /* startupLoading */,
 				82FEF7E6169468CC00729E6D /* About */,
 				82FEF7DC1694578900729E6D /* MenuOptions */,
 				56AF297B160E195600EBA5F0 /* cocos2dExtension */,
@@ -632,7 +636,6 @@
 			children = (
 				56A6568F15EC056F001EFCA4 /* music */,
 				56573DC715DC3D46007E6FDE /* cocosbuilder */,
-				564C0F6F15DADBA0003DEE36 /* Default.png */,
 				824E59811691F4DF0033E997 /* Default-Landscape~ipad.png */,
 				564C0F7315DADBA0003DEE36 /* fps_images.png */,
 				564C0F7515DADBA0003DEE36 /* fps_images-hd.png */,
@@ -1203,6 +1206,7 @@
 		56992B1316956DB30045BABF /* release */ = {
 			isa = PBXGroup;
 			children = (
+				56BE0997169681E4001D1FD2 /* version.txt */,
 				825494C8169590BC00A9C536 /* ccb.zip */,
 			);
 			path = release;
@@ -1211,8 +1215,8 @@
 		56A6568F15EC056F001EFCA4 /* music */ = {
 			isa = PBXGroup;
 			children = (
-				56A6569515EC056F001EFCA4 /* ding_add.mp3 */,
-				56A6569615EC056F001EFCA4 /* error.mp3 */,
+				56BE09A51697083B001D1FD2 /* ding_add.mp3 */,
+				56BE09A61697083B001D1FD2 /* error.mp3 */,
 			);
 			name = music;
 			sourceTree = "<group>";
@@ -1226,6 +1230,7 @@
 			name = cocos2dExtension;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		825494D41695BF8800A9C536 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1233,6 +1238,17 @@
 				825494D71695BFE800A9C536 /* Settings.m */,
 			);
 			name = Settings;
+=======
+		56BE099916968AFE001D1FD2 /* startupLoading */ = {
+			isa = PBXGroup;
+			children = (
+				56BE099A169696CF001D1FD2 /* Loading.h */,
+				56BE099B169696CF001D1FD2 /* Loading.m */,
+				56BE099D1696E8CC001D1FD2 /* CCBResDelegate.h */,
+				56BE099E1696E8CC001D1FD2 /* CCBResDelegate.m */,
+			);
+			name = startupLoading;
+>>>>>>> 1.add download ui res when app startup and ui version changed in server 2.add loading ui
 			sourceTree = "<group>";
 		};
 		82FEF7DC1694578900729E6D /* MenuOptions */ = {
@@ -1303,7 +1319,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				825494CF169591B900A9C536 /* Default-Landscape~ipad.png in Resources */,
 				564C0F7415DADBA0003DEE36 /* fps_images.png in Resources */,
 				564C0F7615DADBA0003DEE36 /* fps_images-hd.png in Resources */,
 				564C0F7815DADBA0003DEE36 /* fps_images-ipadhd.png in Resources */,
@@ -1317,10 +1332,9 @@
 				564C10C515DADBA3003DEE36 /* ChangeLog in Resources */,
 				56573DA615DC3471007E6FDE /* README.md in Resources */,
 				56573DA815DC3471007E6FDE /* LICENSE in Resources */,
-				56A6569715EC056F001EFCA4 /* ding_add.mp3 in Resources */,
-				56A6569815EC056F001EFCA4 /* error.mp3 in Resources */,
 				56992AEF1693C7940045BABF /* README-GHUnit in Resources */,
 				825494C9169590BC00A9C536 /* ccb.zip in Resources */,
+				56BE0998169681E4001D1FD2 /* version.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1474,7 +1488,11 @@
 				56992AE51693C6160045BABF /* ASIInputStream.m in Sources */,
 				56992AE61693C6160045BABF /* ASINetworkQueue.m in Sources */,
 				56992AF01693C7940045BABF /* Reachability.m in Sources */,
+
 				825494D81695BFE800A9C536 /* Settings.m in Sources */,
+
+				56BE099C169696CF001D1FD2 /* Loading.m in Sources */,
+				56BE099F1696E8CC001D1FD2 /* CCBResDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

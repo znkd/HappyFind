@@ -24,14 +24,31 @@ typedef enum
 }RES_STATE;
 
 @class ASIHTTPRequest;
+
+@protocol OffLineResDelegate <NSObject>
+- (void)versionRequestFinished:(ASIHTTPRequest*) request;
+- (void)resRequestFinished:(ASIHTTPRequest*) request;
+- (void)requestFailed:(ASIHTTPRequest*) request;
+@end
+
 @interface OffLineRes : NSObject
 {
     NSString        *m_pathOfServer;
+    NSString        *m_tmpPathOfDoc;
     NSString        *m_pathOfDoc;
+    
+    id<OffLineResDelegate> m_delegate;
 
     REQUEST_STATE   m_requestState;
     RES_STATE       m_resState;
+    
+    NSString*       m_downloadDestinationPath;
 }
--(void) offLineResStart:(int) kindNo;
+@property (nonatomic, assign) NSString* m_pathOfDoc;
+@property (nonatomic, assign) NSString* m_tmpPathOfDoc;
+@property (nonatomic, assign) NSString* m_downloadDestinationPath;
 
+-(id) initWithDelegate:(id<OffLineResDelegate> ) delegate;
+-(void) RequestAStartsynchronous:(NSString*) resName;
+-(void) RequestStartSynchronous:(NSString*) resName;
 @end

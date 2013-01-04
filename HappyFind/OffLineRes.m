@@ -10,18 +10,25 @@
 #import "ASIHTTPRequest.h"
 #import "SSZipArchive.h"
 
+
 @implementation OffLineRes
 
--(id) init
+@synthesize m_pathOfDoc;
+@synthesize m_tmpPathOfDoc;
+@synthesize m_downloadDestinationPath;
+
+-(id) initWithDelegate:(id<OffLineResDelegate> ) delegate
 {
     // always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
     if((self = [super init]))
     {
-        m_pathOfServer = [[NSString alloc] initWithString:@"http://192.168.1.102"];
+        m_pathOfServer = [[NSString alloc] initWithString:@"http://192.168.1.102/"];
         NSArray*    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         m_pathOfDoc = [[paths objectAtIndex:0] retain];
-        
+        m_tmpPathOfDoc = [[m_pathOfDoc stringByAppendingPathComponent:@"tmp"] retain];
+        [[NSFileManager defaultManager] createDirectoryAtPath:m_tmpPathOfDoc withIntermediateDirectories:YES attributes:nil error:nil];
+        m_delegate = delegate;
         m_requestState = REQUEST_IDL;
         m_resState = RES_UNKONWN;
     }
@@ -30,22 +37,22 @@
 
 -(void) dealloc
 {
+    [m_tmpPathOfDoc release];
     [m_pathOfDoc release];
     [m_pathOfServer release];
 
     [super dealloc];
 }
 
--(void) offLineResStart:(int) kindNo
+-(void) RequestAStartsynchronous:(NSString*) resName
 {
     if (m_requestState != REQUEST_START) {
-        NSString*   resName = [NSString stringWithFormat:@"/stage%d.zip", kindNo];
-        NSString*   resStr = [m_pathOfServer stringByAppendingString:resName];
-        NSURL*      requestUrl = [NSURL URLWithString:resStr];
+        NSString*   resquestStr = [m_pathOfServer stringByAppendingString:resName];
+        NSURL*      requestUrl = [NSURL URLWithString:resquestStr];
         ASIHTTPRequest*  request;
         request = [ASIHTTPRequest requestWithURL:requestUrl];
         
-        NSString* dst = [m_pathOfDoc stringByAppendingString:resName];
+        NSString* dst = [m_tmpPathOfDoc stringByAppendingPathComponent:resName];
         [request setDownloadDestinationPath: dst];
         [request setDelegate:self];
 
@@ -53,22 +60,36 @@
         m_requestState = REQUEST_START;
     }
 }
+-(void) RequestStartSynchronous:(NSString*) resName
+{
+    if (m_requestState != REQUEST_START) {
+        NSString*   resquestStr = [m_pathOfServer stringByAppendingString:resName];
+        NSURL*      requestUrl = [NSURL URLWithString:resquestStr];
+        ASIHTTPRequest*  request;
+        request = [ASIHTTPRequest requestWithURL:requestUrl];
+        
+        NSString* dst = [m_tmpPathOfDoc stringByAppendingPathComponent:resName];
+        [request setDownloadDestinationPath: dst];
+        
+        [request startSynchronous];
+        m_requestState = REQUEST_START;
+    }
+}
 
 -(void)requestFinished:(ASIHTTPRequest*) request
 {
-    
-    NSString*   zipPath = request.downloadDestinationPath;
-
-    NSString*   unzipPath = [zipPath stringByReplacingOccurrencesOfString:[zipPath lastPathComponent] withString:@"iPad"];
-
-    [SSZipArchive unzipFileAtPath:zipPath toDestination:unzipPath];
-    
-
-    NSFileManager *defaultManager;
-    defaultManager = [NSFileManager defaultManager];
-    [defaultManager removeItemAtPath:zipPath error:NULL];
-
     m_requestState = REQUEST_END;
+    
+    m_downloadDestinationPath = request.downloadDestinationPath;
+    
+    if([m_downloadDestinationPath rangeOfString:@".zip"].length){
+        
+        [m_delegate resRequestFinished:request];
+        
+    }else{
+        [m_delegate versionRequestFinished:request];
+    }
+
 }
     
 -(void)requestFailed:(ASIHTTPRequest
@@ -77,7 +98,7 @@
 {
     m_requestState = REQUEST_END;
     NSError*    error = [request error];
-    
+    [m_delegate requestFailed:request];
 }
     
     
