@@ -1230,7 +1230,7 @@
 			name = cocos2dExtension;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
+
 		825494D41695BF8800A9C536 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1238,7 +1238,7 @@
 				825494D71695BFE800A9C536 /* Settings.m */,
 			);
 			name = Settings;
-=======
+
 		56BE099916968AFE001D1FD2 /* startupLoading */ = {
 			isa = PBXGroup;
 			children = (
@@ -1248,7 +1248,7 @@
 				56BE099E1696E8CC001D1FD2 /* CCBResDelegate.m */,
 			);
 			name = startupLoading;
->>>>>>> 1.add download ui res when app startup and ui version changed in server 2.add loading ui
+
 			sourceTree = "<group>";
 		};
 		82FEF7DC1694578900729E6D /* MenuOptions */ = {
