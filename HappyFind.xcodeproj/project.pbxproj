@@ -173,6 +173,9 @@
 		56BE0998169681E4001D1FD2 /* version.txt in Resources */ = {isa = PBXBuildFile; fileRef = 56BE0997169681E4001D1FD2 /* version.txt */; };
 		56BE099C169696CF001D1FD2 /* Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BE099B169696CF001D1FD2 /* Loading.m */; };
 		56BE099F1696E8CC001D1FD2 /* CCBResDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BE099E1696E8CC001D1FD2 /* CCBResDelegate.m */; };
+		56C06B02169830300091316D /* stage0.zip in Resources */ = {isa = PBXBuildFile; fileRef = 56C06B00169830300091316D /* stage0.zip */; };
+		56C06B07169854210091316D /* icons.zip in Resources */ = {isa = PBXBuildFile; fileRef = 56C06B06169854210091316D /* icons.zip */; };
+		56C06B0A169858190091316D /* IconsResDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C06B09169858190091316D /* IconsResDelegate.m */; };
 		825494C9169590BC00A9C536 /* ccb.zip in Resources */ = {isa = PBXBuildFile; fileRef = 825494C8169590BC00A9C536 /* ccb.zip */; };
 		825494CA1695913500A9C536 /* CCBAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96D51693DA990084645C /* CCBAnimationManager.m */; };
 		825494CB1695913500A9C536 /* CCBKeyframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96D71693DA990084645C /* CCBKeyframe.m */; };
@@ -526,8 +529,10 @@
 		56BE099B169696CF001D1FD2 /* Loading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Loading.m; sourceTree = "<group>"; };
 		56BE099D1696E8CC001D1FD2 /* CCBResDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBResDelegate.h; sourceTree = "<group>"; };
 		56BE099E1696E8CC001D1FD2 /* CCBResDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBResDelegate.m; sourceTree = "<group>"; };
-		56BE09A51697083B001D1FD2 /* ding_add.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ding_add.mp3; path = Resources/cocosbuilder/ding_add.mp3; sourceTree = "<group>"; };
-		56BE09A61697083B001D1FD2 /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = error.mp3; path = Resources/cocosbuilder/error.mp3; sourceTree = "<group>"; };
+		56C06B00169830300091316D /* stage0.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = stage0.zip; sourceTree = "<group>"; };
+		56C06B06169854210091316D /* icons.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = icons.zip; sourceTree = "<group>"; };
+		56C06B08169858190091316D /* IconsResDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconsResDelegate.h; sourceTree = "<group>"; };
+		56C06B09169858190091316D /* IconsResDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconsResDelegate.m; sourceTree = "<group>"; };
 		824E59811691F4DF0033E997 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "Resources/cocosbuilder/Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		825494C8169590BC00A9C536 /* ccb.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = ccb.zip; sourceTree = "<group>"; };
 		825494D61695BFE800A9C536 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
@@ -635,7 +640,6 @@
 		564C0F6E15DADBA0003DEE36 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				56A6568F15EC056F001EFCA4 /* music */,
 				56573DC715DC3D46007E6FDE /* cocosbuilder */,
 				824E59811691F4DF0033E997 /* Default-Landscape~ipad.png */,
 				564C0F7315DADBA0003DEE36 /* fps_images.png */,
@@ -1207,19 +1211,12 @@
 		56992B1316956DB30045BABF /* release */ = {
 			isa = PBXGroup;
 			children = (
+				56C06B00169830300091316D /* stage0.zip */,
+				56C06B06169854210091316D /* icons.zip */,
 				56BE0997169681E4001D1FD2 /* version.txt */,
 				825494C8169590BC00A9C536 /* ccb.zip */,
 			);
 			path = release;
-			sourceTree = "<group>";
-		};
-		56A6568F15EC056F001EFCA4 /* music */ = {
-			isa = PBXGroup;
-			children = (
-				56BE09A51697083B001D1FD2 /* ding_add.mp3 */,
-				56BE09A61697083B001D1FD2 /* error.mp3 */,
-			);
-			name = music;
 			sourceTree = "<group>";
 		};
 		56AF297B160E195600EBA5F0 /* cocos2dExtension */ = {
@@ -1231,15 +1228,6 @@
 			name = cocos2dExtension;
 			sourceTree = "<group>";
 		};
-		825494D41695BF8800A9C536 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				825494D61695BFE800A9C536 /* Settings.h */,
-				825494D71695BFE800A9C536 /* Settings.m */,
-			);
-			name = Settings;
-			sourceTree = "<group>";
-		};
 		56BE099916968AFE001D1FD2 /* startupLoading */ = {
 			isa = PBXGroup;
 			children = (
@@ -1247,8 +1235,19 @@
 				56BE099B169696CF001D1FD2 /* Loading.m */,
 				56BE099D1696E8CC001D1FD2 /* CCBResDelegate.h */,
 				56BE099E1696E8CC001D1FD2 /* CCBResDelegate.m */,
+				56C06B08169858190091316D /* IconsResDelegate.h */,
+				56C06B09169858190091316D /* IconsResDelegate.m */,
 			);
 			name = startupLoading;
+			sourceTree = "<group>";
+		};
+		825494D41695BF8800A9C536 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				825494D61695BFE800A9C536 /* Settings.h */,
+				825494D71695BFE800A9C536 /* Settings.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		82FEF7DC1694578900729E6D /* MenuOptions */ = {
@@ -1335,6 +1334,8 @@
 				56992AEF1693C7940045BABF /* README-GHUnit in Resources */,
 				825494C9169590BC00A9C536 /* ccb.zip in Resources */,
 				56BE0998169681E4001D1FD2 /* version.txt in Resources */,
+				56C06B02169830300091316D /* stage0.zip in Resources */,
+				56C06B07169854210091316D /* icons.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1491,6 +1492,7 @@
 				825494D81695BFE800A9C536 /* Settings.m in Sources */,
 				56BE099C169696CF001D1FD2 /* Loading.m in Sources */,
 				56BE099F1696E8CC001D1FD2 /* CCBResDelegate.m in Sources */,
+				56C06B0A169858190091316D /* IconsResDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

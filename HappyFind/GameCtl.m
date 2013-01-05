@@ -8,6 +8,7 @@
 #import "GameCtl.h"
 #import "CCBReader.h"
 #import "OffLineRes.h"
+#import "SSZipArchive.h"
 
 @implementation GameCtl
 
@@ -26,6 +27,23 @@ static GameCtl* _sharedGameCtl = nil;
         {//the first startup from app folder to get ccb.zip
             [CCBReader unzipResources:@"ccb.zip"];
         }
+        if(![[NSFileManager defaultManager] fileExistsAtPath:[docPath stringByAppendingPathComponent:@"iPad"]])
+        {//the first startup from app folder to get stage0.zip
+            NSString* dst = [docPath stringByAppendingPathComponent:@"iPad"];
+            [[NSFileManager defaultManager] createDirectoryAtPath:dst withIntermediateDirectories:YES attributes:nil error:nil];
+            NSString* src = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"stage0.zip"];
+            //unzip
+            [SSZipArchive unzipFileAtPath:src toDestination:dst];
+        }
+        NSString*   iPadPath = [docPath stringByAppendingPathComponent:@"iPad"];
+        if(![[NSFileManager defaultManager] fileExistsAtPath:[iPadPath stringByAppendingPathComponent:@"icons"]])
+        {//the first startup from app folder to get stage0.zip
+            NSString* dst = [iPadPath stringByAppendingPathComponent:@"icons"];
+            [[NSFileManager defaultManager] createDirectoryAtPath:dst withIntermediateDirectories:YES attributes:nil error:nil];
+            NSString* src = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"icons.zip"];
+            //unzip
+            [SSZipArchive unzipFileAtPath:src toDestination:dst];
+        }
 
     }
     return _sharedGameCtl;
@@ -42,7 +60,7 @@ static GameCtl* _sharedGameCtl = nil;
         
         NSArray*    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString*   docPath = [paths objectAtIndex:0];
-        NSString*  resPictureRoot =  [docPath stringByAppendingPathComponent:@"iPad"];
+        NSString*   resPictureRoot =  [docPath stringByAppendingPathComponent:@"iPad"];
         
         //get stage folder
         for(int iCnt =0;;iCnt++)

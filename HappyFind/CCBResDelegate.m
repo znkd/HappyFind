@@ -24,7 +24,7 @@
 -(void) dealloc
 {
     [m_versionServerPath release];
-    [super release];
+    [super dealloc];
 }
 - (void)versionRequestFinished:(ASIHTTPRequest*) request
 {
@@ -58,9 +58,7 @@
         
     }else {
         
-        //goto menu
-        //[[CCDirector sharedDirector] runWithScene:[CCBReader sceneWithNodeGraphFromFile:@"menu.ccbi"]];
-        [m_control gotoMenuScene];
+        [m_control startIconsResRequest];
     } 
 }
 
@@ -81,13 +79,12 @@
     NSString* src = m_versionServerPath;
     NSString* dst = [docPath stringByAppendingPathComponent:@"version"];
     [[NSFileManager defaultManager] moveItemAtPath: src toPath:dst error:nil];
-    //goto menu
-    //[[CCDirector sharedDirector] runWithScene:[CCBReader sceneWithNodeGraphFromFile:@"menu.ccbi"]];
-    [m_control gotoMenuScene];
+
+    [m_control startIconsResRequest];
 }
 
 - (void)requestFailed:(ASIHTTPRequest*) request
 {
-    [m_control gotoMenuScene];
+    [m_control startIconsResRequest];
 }
 @end

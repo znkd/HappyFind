@@ -11,13 +11,17 @@
 
 @class OffLineRes;
 @class CCBResDelegate;
+@class IconsResDelegate;
+
 @interface Loading : CCNode {
     
     OffLineRes*  m_ccbResRequest;
     CCBResDelegate* m_ccbDelegate; 
     
-    OffLineRes*  m_stageResRequest;
+    OffLineRes*  m_iconsResRequest;
+    IconsResDelegate* m_iconsResDelegate;
 }
 -(void) startCCBResRequest;
+-(void) startIconsResRequest;
 -(void) gotoMenuScene;
 @end
