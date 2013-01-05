@@ -179,6 +179,7 @@
 		825494CC1695913500A9C536 /* CCBSequenceProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96DB1693DA990084645C /* CCBSequenceProperty.m */; };
 		825494CD1695913500A9C536 /* CCNode+CCBRelativePositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96DD1693DA990084645C /* CCNode+CCBRelativePositioning.m */; };
 		825494CE1695917900A9C536 /* CCBsequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96D91693DA990084645C /* CCBsequence.m */; };
+		825494D81695BFE800A9C536 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 825494D71695BFE800A9C536 /* Settings.m */; };
 		82FEF7DF169457C900729E6D /* MenuOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FEF7DE169457C900729E6D /* MenuOptions.m */; };
 		82FEF7E9169468F100729E6D /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FEF7E8169468F100729E6D /* About.m */; };
 /* End PBXBuildFile section */
@@ -1230,7 +1231,6 @@
 			name = cocos2dExtension;
 			sourceTree = "<group>";
 		};
-
 		825494D41695BF8800A9C536 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1238,7 +1238,8 @@
 				825494D71695BFE800A9C536 /* Settings.m */,
 			);
 			name = Settings;
-
+			sourceTree = "<group>";
+		};
 		56BE099916968AFE001D1FD2 /* startupLoading */ = {
 			isa = PBXGroup;
 			children = (
@@ -1248,7 +1249,6 @@
 				56BE099E1696E8CC001D1FD2 /* CCBResDelegate.m */,
 			);
 			name = startupLoading;
-
 			sourceTree = "<group>";
 		};
 		82FEF7DC1694578900729E6D /* MenuOptions */ = {
@@ -1488,9 +1488,7 @@
 				56992AE51693C6160045BABF /* ASIInputStream.m in Sources */,
 				56992AE61693C6160045BABF /* ASINetworkQueue.m in Sources */,
 				56992AF01693C7940045BABF /* Reachability.m in Sources */,
-
 				825494D81695BFE800A9C536 /* Settings.m in Sources */,
-
 				56BE099C169696CF001D1FD2 /* Loading.m in Sources */,
 				56BE099F1696E8CC001D1FD2 /* CCBResDelegate.m in Sources */,
 			);
