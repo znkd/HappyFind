@@ -57,8 +57,8 @@
 												<string>Position</string>
 												<key>value</key>
 												<array>
-													<real>952</real>
-													<real>72</real>
+													<real>1935.235107421875</real>
+													<real>108</real>
 													<integer>0</integer>
 												</array>
 											</dict>
@@ -266,8 +266,8 @@
 													<integer>3</integer>
 													<key>value</key>
 													<array>
-														<real>377</real>
-														<real>300</real>
+														<real>955.84002685546875</real>
+														<real>344</real>
 													</array>
 												</dict>
 											</array>
@@ -303,118 +303,7 @@
 															<integer>3</integer>
 															<key>value</key>
 															<array>
-																<real>460</real>
-																<real>58</real>
-															</array>
-														</dict>
-													</array>
-													<key>name</key>
-													<string>position</string>
-													<key>type</key>
-													<integer>3</integer>
-												</dict>
-											</dict>
-										</dict>
-										<key>baseClass</key>
-										<string>CCSprite</string>
-										<key>children</key>
-										<array/>
-										<key>customClass</key>
-										<string></string>
-										<key>displayName</key>
-										<string>logoFind</string>
-										<key>memberVarAssignmentName</key>
-										<string></string>
-										<key>memberVarAssignmentType</key>
-										<integer>0</integer>
-										<key>properties</key>
-										<array>
-											<dict>
-												<key>baseValue</key>
-												<array>
-													<real>452</real>
-													<real>60</real>
-												</array>
-												<key>name</key>
-												<string>position</string>
-												<key>type</key>
-												<string>Position</string>
-												<key>value</key>
-												<array>
-													<real>460</real>
-													<real>58</real>
-													<integer>0</integer>
-												</array>
-											</dict>
-											<dict>
-												<key>name</key>
-												<string>anchorPoint</string>
-												<key>type</key>
-												<string>Point</string>
-												<key>value</key>
-												<array>
-													<real>0.5</real>
-													<real>0.5</real>
-												</array>
-											</dict>
-											<dict>
-												<key>name</key>
-												<string>scale</string>
-												<key>type</key>
-												<string>ScaleLock</string>
-												<key>value</key>
-												<array>
-													<real>1</real>
-													<real>1</real>
-													<false/>
-													<integer>0</integer>
-												</array>
-											</dict>
-											<dict>
-												<key>name</key>
-												<string>ignoreAnchorPointForPosition</string>
-												<key>type</key>
-												<string>Check</string>
-												<key>value</key>
-												<false/>
-											</dict>
-											<dict>
-												<key>name</key>
-												<string>displayFrame</string>
-												<key>type</key>
-												<string>SpriteFrame</string>
-												<key>value</key>
-												<array>
-													<string></string>
-													<string>ui/find.png</string>
-												</array>
-											</dict>
-										</array>
-										<key>seqExpanded</key>
-										<true/>
-									</dict>
-									<dict>
-										<key>animatedProperties</key>
-										<dict>
-											<key>0</key>
-											<dict>
-												<key>position</key>
-												<dict>
-													<key>keyframes</key>
-													<array>
-														<dict>
-															<key>easing</key>
-															<dict>
-																<key>type</key>
-																<integer>1</integer>
-															</dict>
-															<key>time</key>
-															<real>0.0</real>
-															<key>type</key>
-															<integer>3</integer>
-															<key>value</key>
-															<array>
-																<real>302</real>
+																<real>604</real>
 																<real>-272</real>
 															</array>
 														</dict>
@@ -452,7 +341,7 @@
 												<string>Position</string>
 												<key>value</key>
 												<array>
-													<real>302</real>
+													<real>604</real>
 													<real>-272</real>
 													<integer>0</integer>
 												</array>
@@ -552,7 +441,7 @@ Artists:
 															<integer>3</integer>
 															<key>value</key>
 															<array>
-																<real>495.6112060546875</real>
+																<real>1000</real>
 																<real>-298</real>
 															</array>
 														</dict>
@@ -590,7 +479,7 @@ Artists:
 												<string>Position</string>
 												<key>value</key>
 												<array>
-													<real>495.6112060546875</real>
+													<real>1000</real>
 													<real>-298</real>
 													<integer>0</integer>
 												</array>
@@ -692,8 +581,8 @@ bigbear   yoyo</string>
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>377</real>
-											<real>300</real>
+											<real>955.84002685546875</real>
+											<real>344</real>
 											<integer>0</integer>
 										</array>
 									</dict>
@@ -737,7 +626,7 @@ bigbear   yoyo</string>
 										<key>value</key>
 										<array>
 											<string></string>
-											<string>ui/happy.png</string>
+											<string>ui/happyfind.png</string>
 										</array>
 									</dict>
 								</array>
@@ -883,8 +772,6 @@ bigbear   yoyo</string>
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -915,8 +802,8 @@ bigbear   yoyo</string>
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.5</real>
 							<false/>
 							<integer>0</integer>
 						</array>
