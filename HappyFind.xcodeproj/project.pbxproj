@@ -1554,7 +1554,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: HU JUNQIANG (CABN55FYZB)";
+<<<<<<< HEAD
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+=======
+>>>>>>> 1.modify for developer code_sign_identity 2.bundle id +2.0 3.bundleName +2.0
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1572,7 +1575,10 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "BB7C67DB-77B2-479C-857E-E37B44A3E5EB";
+<<<<<<< HEAD
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+=======
+>>>>>>> 1.modify for developer code_sign_identity 2.bundle id +2.0 3.bundleName +2.0
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1582,7 +1588,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: HU JUNQIANG (CABN55FYZB)";
+<<<<<<< HEAD
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+=======
+>>>>>>> 1.modify for developer code_sign_identity 2.bundle id +2.0 3.bundleName +2.0
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HappyFind/Prefix.pch;
@@ -1599,7 +1608,10 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "BB7C67DB-77B2-479C-857E-E37B44A3E5EB";
+<<<<<<< HEAD
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+=======
+>>>>>>> 1.modify for developer code_sign_identity 2.bundle id +2.0 3.bundleName +2.0
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
