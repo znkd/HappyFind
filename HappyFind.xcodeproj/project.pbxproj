@@ -182,6 +182,7 @@
 		825494CD1695913500A9C536 /* CCNode+CCBRelativePositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96DD1693DA990084645C /* CCNode+CCBRelativePositioning.m */; };
 		825494CE1695917900A9C536 /* CCBsequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96D91693DA990084645C /* CCBsequence.m */; };
 		825494D81695BFE800A9C536 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 825494D71695BFE800A9C536 /* Settings.m */; };
+		825EE9A9169C6F1E00BF0115 /* FogAndStars.m in Sources */ = {isa = PBXBuildFile; fileRef = 825EE9A8169C6F1E00BF0115 /* FogAndStars.m */; };
 		8278946C169B286400B41E0B /* ccb.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8278946B169B286400B41E0B /* ccb.zip */; };
 		82FEF7DF169457C900729E6D /* MenuOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FEF7DE169457C900729E6D /* MenuOptions.m */; };
 		82FEF7E9169468F100729E6D /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FEF7E8169468F100729E6D /* About.m */; };
@@ -546,6 +547,8 @@
 		825A96DB1693DA990084645C /* CCBSequenceProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBSequenceProperty.m; sourceTree = "<group>"; };
 		825A96DC1693DA990084645C /* CCNode+CCBRelativePositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNode+CCBRelativePositioning.h"; sourceTree = "<group>"; };
 		825A96DD1693DA990084645C /* CCNode+CCBRelativePositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCNode+CCBRelativePositioning.m"; sourceTree = "<group>"; };
+		825EE9A7169C6F1E00BF0115 /* FogAndStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FogAndStars.h; sourceTree = "<group>"; };
+		825EE9A8169C6F1E00BF0115 /* FogAndStars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FogAndStars.m; sourceTree = "<group>"; };
 		8278946B169B286400B41E0B /* ccb.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = ccb.zip; sourceTree = "<group>"; };
 		82FEF7DD169457C900729E6D /* MenuOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuOptions.h; sourceTree = "<group>"; };
 		82FEF7DE169457C900729E6D /* MenuOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuOptions.m; sourceTree = "<group>"; };
@@ -1010,6 +1013,8 @@
 			children = (
 				564C111215DADEBB003DEE36 /* MainMenu.h */,
 				564C111315DADEBB003DEE36 /* MainMenu.m */,
+				825EE9A7169C6F1E00BF0115 /* FogAndStars.h */,
+				825EE9A8169C6F1E00BF0115 /* FogAndStars.m */,
 			);
 			name = mainMenu;
 			sourceTree = "<group>";
@@ -1493,6 +1498,7 @@
 				56BE099C169696CF001D1FD2 /* Loading.m in Sources */,
 				56BE099F1696E8CC001D1FD2 /* CCBResDelegate.m in Sources */,
 				56C06B0A169858190091316D /* IconsResDelegate.m in Sources */,
+				825EE9A9169C6F1E00BF0115 /* FogAndStars.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1547,6 +1553,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: HU JUNQIANG (CABN55FYZB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1563,6 +1571,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BB7C67DB-77B2-479C-857E-E37B44A3E5EB";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1571,6 +1581,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: HU JUNQIANG (CABN55FYZB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HappyFind/Prefix.pch;
@@ -1586,6 +1598,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BB7C67DB-77B2-479C-857E-E37B44A3E5EB";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

@@ -33,78 +33,6 @@
 						<key>customClass</key>
 						<string></string>
 						<key>displayName</key>
-						<string>FogAndStarts</string>
-						<key>memberVarAssignmentName</key>
-						<string></string>
-						<key>memberVarAssignmentType</key>
-						<integer>0</integer>
-						<key>properties</key>
-						<array>
-							<dict>
-								<key>name</key>
-								<string>position</string>
-								<key>type</key>
-								<string>Position</string>
-								<key>value</key>
-								<array>
-									<real>1016</real>
-									<real>848</real>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>anchorPoint</string>
-								<key>type</key>
-								<string>Point</string>
-								<key>value</key>
-								<array>
-									<real>0.5</real>
-									<real>0.5</real>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>scale</string>
-								<key>type</key>
-								<string>ScaleLock</string>
-								<key>value</key>
-								<array>
-									<real>1</real>
-									<real>1</real>
-									<false/>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>ignoreAnchorPointForPosition</string>
-								<key>type</key>
-								<string>Check</string>
-								<key>value</key>
-								<false/>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>displayFrame</string>
-								<key>type</key>
-								<string>SpriteFrame</string>
-								<key>value</key>
-								<array>
-									<string></string>
-									<string>ui/mainmenu_fog_start.png</string>
-								</array>
-							</dict>
-						</array>
-					</dict>
-					<dict>
-						<key>baseClass</key>
-						<string>CCSprite</string>
-						<key>children</key>
-						<array/>
-						<key>customClass</key>
-						<string></string>
-						<key>displayName</key>
 						<string>Cloud</string>
 						<key>memberVarAssignmentName</key>
 						<string></string>
@@ -154,6 +82,56 @@
 									<string></string>
 									<string>ui/mainmenu_cloud.png</string>
 								</array>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>baseClass</key>
+						<string>CCBFile</string>
+						<key>children</key>
+						<array/>
+						<key>customClass</key>
+						<string></string>
+						<key>displayName</key>
+						<string>CCBFile</string>
+						<key>memberVarAssignmentName</key>
+						<string>m_fogAndStars</string>
+						<key>memberVarAssignmentType</key>
+						<integer>1</integer>
+						<key>properties</key>
+						<array>
+							<dict>
+								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>1024</real>
+									<real>768</real>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>scale</string>
+								<key>type</key>
+								<string>ScaleLock</string>
+								<key>value</key>
+								<array>
+									<real>1</real>
+									<real>1</real>
+									<false/>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>ccbFile</string>
+								<key>type</key>
+								<string>CCBFile</string>
+								<key>value</key>
+								<string>fog_stars.ccb</string>
 							</dict>
 						</array>
 					</dict>
@@ -228,6 +206,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>seqExpanded</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>baseClass</key>
@@ -534,16 +514,14 @@
 														<key>type</key>
 														<integer>1</integer>
 													</dict>
-													<key>name</key>
-													<string>position</string>
 													<key>time</key>
 													<real>0.0</real>
 													<key>type</key>
 													<integer>3</integer>
 													<key>value</key>
 													<array>
-														<real>1036</real>
-														<real>-150</real>
+														<real>1024</real>
+														<real>-212</real>
 													</array>
 												</dict>
 												<dict>
@@ -552,14 +530,16 @@
 														<key>type</key>
 														<integer>1</integer>
 													</dict>
+													<key>name</key>
+													<string>position</string>
 													<key>time</key>
-													<real>0.83333331346511841</real>
+													<real>0.40000000596046448</real>
 													<key>type</key>
 													<integer>3</integer>
 													<key>value</key>
 													<array>
-														<real>1036</real>
-														<real>620</real>
+														<real>1024</real>
+														<real>524</real>
 													</array>
 												</dict>
 											</array>
@@ -567,6 +547,34 @@
 											<string>position</string>
 											<key>type</key>
 											<integer>3</integer>
+										</dict>
+										<key>scale</key>
+										<dict>
+											<key>keyframes</key>
+											<array>
+												<dict>
+													<key>easing</key>
+													<dict>
+														<key>type</key>
+														<integer>1</integer>
+													</dict>
+													<key>name</key>
+													<string>scale</string>
+													<key>time</key>
+													<real>0.0</real>
+													<key>type</key>
+													<integer>4</integer>
+													<key>value</key>
+													<array>
+														<real>1</real>
+														<real>1</real>
+													</array>
+												</dict>
+											</array>
+											<key>name</key>
+											<string>scale</string>
+											<key>type</key>
+											<integer>4</integer>
 										</dict>
 									</dict>
 								</dict>
@@ -579,9 +587,9 @@
 								<key>displayName</key>
 								<string>Play</string>
 								<key>memberVarAssignmentName</key>
-								<string></string>
+								<string>m_playBtn</string>
 								<key>memberVarAssignmentType</key>
-								<integer>0</integer>
+								<integer>1</integer>
 								<key>properties</key>
 								<array>
 									<dict>
@@ -596,8 +604,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>1036</real>
-											<real>620</real>
+											<real>1024</real>
+											<real>-212</real>
 											<integer>0</integer>
 										</array>
 									</dict>
@@ -613,6 +621,11 @@
 										</array>
 									</dict>
 									<dict>
+										<key>baseValue</key>
+										<array>
+											<real>1</real>
+											<real>1</real>
+										</array>
 										<key>name</key>
 										<string>scale</string>
 										<key>type</key>
@@ -876,7 +889,7 @@
 										<integer>1</integer>
 									</dict>
 									<key>time</key>
-									<real>0.60000002384185791</real>
+									<real>0.40000000596046448</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -920,7 +933,7 @@
 						<key>value</key>
 						<array>
 							<real>0.0</real>
-							<real>0.0</real>
+							<real>110</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -983,7 +996,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.60000002384185791</real>
+									<real>0.40000000596046448</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -1027,7 +1040,7 @@
 						<key>value</key>
 						<array>
 							<real>0.0</real>
-							<real>0.0</real>
+							<real>110</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1190,7 +1203,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

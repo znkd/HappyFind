@@ -18,13 +18,19 @@
 
 - (void) didLoadFromCCB
 {    
-
+    
     
 }
 
 -(void) OnPlay
 {
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"room.ccbi"]];
+    [m_fogAndStars performFogComeIn];
+    
+    [self performSelector:@selector(changeScene) withObject:nil afterDelay:0.5];
 }
 
+-(void)changeScene
+{
+    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"room.ccbi"]];
+}
 @end

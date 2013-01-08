@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-
+#import "FogAndStars.h"
 @interface MainMenu : CCNode {
     CCSprite*   m_options;
     CCSprite*   m_twitter;
     CCSprite*   m_facebook;
     CCSprite*   m_about;
+    CCSprite*   m_playBtn;
+    FogAndStars* m_fogAndStars;
 }
 
 @end
