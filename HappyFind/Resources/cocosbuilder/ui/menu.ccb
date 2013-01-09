@@ -80,7 +80,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ui/mainmenu_cloud.png</string>
+									<string>ui/cloud.png</string>
 								</array>
 							</dict>
 						</array>
@@ -100,18 +100,6 @@
 						<integer>1</integer>
 						<key>properties</key>
 						<array>
-							<dict>
-								<key>name</key>
-								<string>position</string>
-								<key>type</key>
-								<string>Position</string>
-								<key>value</key>
-								<array>
-									<real>1024</real>
-									<real>768</real>
-									<integer>0</integer>
-								</array>
-							</dict>
 							<dict>
 								<key>name</key>
 								<string>scale</string>
@@ -157,8 +145,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>1024</real>
-									<real>1060</real>
+									<real>512</real>
+									<real>636</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -520,8 +508,8 @@
 													<integer>3</integer>
 													<key>value</key>
 													<array>
-														<real>1024</real>
-														<real>-212</real>
+														<real>512</real>
+														<real>-108</real>
 													</array>
 												</dict>
 												<dict>
@@ -538,8 +526,8 @@
 													<integer>3</integer>
 													<key>value</key>
 													<array>
-														<real>1024</real>
-														<real>524</real>
+														<real>512</real>
+														<real>360</real>
 													</array>
 												</dict>
 											</array>
@@ -604,8 +592,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>1024</real>
-											<real>-212</real>
+											<real>512</real>
+											<real>360</real>
 											<integer>0</integer>
 										</array>
 									</dict>
@@ -828,9 +816,9 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-							<true/>
+							<real>1</real>
+							<real>1</real>
+							<false/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -850,7 +838,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Default-Landscape~ipad.png</string>
+							<string>ui/background.png</string>
 						</array>
 					</dict>
 				</array>
@@ -933,7 +921,7 @@
 						<key>value</key>
 						<array>
 							<real>0.0</real>
-							<real>110</real>
+							<real>0.0</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1040,7 +1028,7 @@
 						<key>value</key>
 						<array>
 							<real>0.0</real>
-							<real>110</real>
+							<real>0.0</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1066,6 +1054,8 @@
 						<string>settings.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -1203,7 +1193,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>0.40000000596046448</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

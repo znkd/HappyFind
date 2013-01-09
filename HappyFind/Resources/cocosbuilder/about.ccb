@@ -47,8 +47,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>1024</real>
-									<real>1044</real>
+									<real>512</real>
+									<real>636</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -70,8 +70,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>1.5</real>
-									<real>1.5</real>
+									<real>1</real>
+									<real>1</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -92,7 +92,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ui/mainmenu_fog_start.png</string>
+									<string>ui/menustart.png</string>
 								</array>
 							</dict>
 						</array>
@@ -152,7 +152,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ui/mainmenu_cloud.png</string>
+									<string>ui/cloud.png</string>
 								</array>
 							</dict>
 						</array>
@@ -184,8 +184,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>1935.235107421875</real>
-											<real>108</real>
+											<real>942</real>
+											<real>76</real>
 											<integer>0</integer>
 										</array>
 									</dict>
@@ -393,8 +393,8 @@
 											<integer>3</integer>
 											<key>value</key>
 											<array>
-												<real>955.84002685546875</real>
-												<real>344</real>
+												<real>512</real>
+												<real>422</real>
 											</array>
 										</dict>
 									</array>
@@ -430,8 +430,8 @@
 													<integer>3</integer>
 													<key>value</key>
 													<array>
-														<real>604</real>
-														<real>-272</real>
+														<real>196</real>
+														<real>-254</real>
 													</array>
 												</dict>
 											</array>
@@ -468,8 +468,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>604</real>
-											<real>-272</real>
+											<real>196</real>
+											<real>-254</real>
 											<integer>0</integer>
 										</array>
 									</dict>
@@ -568,8 +568,8 @@ Artists:
 													<integer>3</integer>
 													<key>value</key>
 													<array>
-														<real>1000</real>
-														<real>-298</real>
+														<real>426</real>
+														<real>-280</real>
 													</array>
 												</dict>
 											</array>
@@ -606,8 +606,8 @@ Artists:
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>1000</real>
-											<real>-298</real>
+											<real>426</real>
+											<real>-280</real>
 											<integer>0</integer>
 										</array>
 									</dict>
@@ -708,8 +708,8 @@ bigbear   yoyo</string>
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>955.84002685546875</real>
-									<real>344</real>
+									<real>512</real>
+									<real>422</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -941,8 +941,8 @@ bigbear   yoyo</string>
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.5</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -963,7 +963,7 @@ bigbear   yoyo</string>
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Default-Landscape~ipad.png</string>
+							<string>ui/background.png</string>
 						</array>
 					</dict>
 				</array>

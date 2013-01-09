@@ -26,7 +26,7 @@
 {
     [m_fogAndStars performFogComeIn];
     
-    [self performSelector:@selector(changeScene) withObject:nil afterDelay:0.5];
+    [self performSelector:@selector(changeScene) withObject:nil afterDelay:0.3];
 }
 
 -(void)changeScene

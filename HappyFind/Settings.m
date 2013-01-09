@@ -47,10 +47,10 @@
     //[[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"about.ccbi"]];
     _btnVoiceOn = !_btnVoiceOn;
     if (_btnVoiceOn) {
-        CCSprite* img = [CCSprite spriteWithFile:@"sound_o.png"];
+        CCSprite* img = [CCSprite spriteWithFile:@"voice.png"];
         [m_voiceBtn setNormalImage:(CCNode<CCRGBAProtocol> *)img];
     }else {
-        CCSprite* img = [CCSprite spriteWithFile:@"sound_c.png"];
+        CCSprite* img = [CCSprite spriteWithFile:@"voiceclose.png"];
         [m_voiceBtn setNormalImage:(CCNode<CCRGBAProtocol> *)img];
     }
 }

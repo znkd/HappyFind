@@ -14,7 +14,7 @@
 - (void) didLoadFromCCB
 { 
   m_cgpoint = CGPointMake(0, 0);
-    m_aboutLogoHappy.position = ccp(1000,300);
+    m_aboutLogoHappy.position = ccp(512,350);
     
   [self scheduleUpdate];
 
@@ -36,7 +36,7 @@
 	m_aboutLogoHappy.position = ccp(m_aboutLogoHappy.position.x, m_aboutLogoHappy.position.y+50*delta);
 	
 	//label change
-	if ((m_aboutLogoHappy.position.y + 50*delta) >= 2200) {
+	if ((m_aboutLogoHappy.position.y + 50*delta) >= 1400) {
 
 		m_aboutLogoHappy.position = ccp(m_aboutLogoHappy.position.x, -63);
 	}
