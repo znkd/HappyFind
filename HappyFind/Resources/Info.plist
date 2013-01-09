@@ -19,6 +19,7 @@
 		<string>Icon-Small.png</string>
 		<string>Icon-Small@2x.png</string>
 		<string>Default-Landscape~ipad.png</string>
+		<string>Default-Landscape~ipad.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -32,6 +33,7 @@
 				<string>Icon-Small-50.png</string>
 				<string>Icon-Small.png</string>
 				<string>Icon-Small@2x.png</string>
+				<string>Default-Landscape~ipad.png</string>
 				<string>Default-Landscape~ipad.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
