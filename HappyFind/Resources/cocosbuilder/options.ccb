@@ -221,7 +221,7 @@
 							<dict>
 								<key>baseValue</key>
 								<array>
-									<real>958</real>
+									<real>978</real>
 									<real>690</real>
 								</array>
 								<key>name</key>
@@ -230,7 +230,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>958</real>
+									<real>978</real>
 									<real>690</real>
 									<integer>0</integer>
 								</array>
