@@ -114,6 +114,18 @@
 						<array>
 							<dict>
 								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>316</real>
+									<real>128</real>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
 								<string>anchorPoint</string>
 								<key>type</key>
 								<string>Point</string>
@@ -152,8 +164,16 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ui/cloud.png</string>
+									<string>ui/logo.png</string>
 								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>opacity</string>
+								<key>type</key>
+								<string>Byte</string>
+								<key>value</key>
+								<integer>158</integer>
 							</dict>
 						</array>
 					</dict>
