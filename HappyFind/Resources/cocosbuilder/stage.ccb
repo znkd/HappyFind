@@ -545,7 +545,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string></string>
+									<string>ui/arrow1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -658,7 +658,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string></string>
+									<string>ui/arrow2.png</string>
 								</array>
 							</dict>
 							<dict>
