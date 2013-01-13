@@ -183,6 +183,10 @@
 		825494CD1695913500A9C536 /* CCNode+CCBRelativePositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96DD1693DA990084645C /* CCNode+CCBRelativePositioning.m */; };
 		825494CE1695917900A9C536 /* CCBsequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96D91693DA990084645C /* CCBsequence.m */; };
 		825494D81695BFE800A9C536 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 825494D71695BFE800A9C536 /* Settings.m */; };
+		825B71CD16A1B51F00EEDC57 /* StageSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B71CC16A1B51F00EEDC57 /* StageSelect.m */; };
+		825B71D016A1B64500EEDC57 /* BallonMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B71CF16A1B64500EEDC57 /* BallonMenu.m */; };
+		825B71E016A1BA5300EEDC57 /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B71DE16A1BA5300EEDC57 /* CCScrollLayer.m */; };
+		825B71E116A1BA5300EEDC57 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 825B71DF16A1BA5300EEDC57 /* README.md */; };
 		825EE9A9169C6F1E00BF0115 /* FogAndStars.m in Sources */ = {isa = PBXBuildFile; fileRef = 825EE9A8169C6F1E00BF0115 /* FogAndStars.m */; };
 		8278946C169B286400B41E0B /* ccb.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8278946B169B286400B41E0B /* ccb.zip */; };
 		82FEF7DF169457C900729E6D /* MenuOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FEF7DE169457C900729E6D /* MenuOptions.m */; };
@@ -536,7 +540,6 @@
 		56C06B06169854210091316D /* icons.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = icons.zip; sourceTree = "<group>"; };
 		56C06B08169858190091316D /* IconsResDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconsResDelegate.h; sourceTree = "<group>"; };
 		56C06B09169858190091316D /* IconsResDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconsResDelegate.m; sourceTree = "<group>"; };
-		825494C8169590BC00A9C536 /* ccb.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = ccb.zip; sourceTree = "<group>"; };
 		825494D61695BFE800A9C536 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		825494D71695BFE800A9C536 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		825A96D41693DA990084645C /* CCBAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBAnimationManager.h; sourceTree = "<group>"; };
@@ -549,6 +552,13 @@
 		825A96DB1693DA990084645C /* CCBSequenceProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBSequenceProperty.m; sourceTree = "<group>"; };
 		825A96DC1693DA990084645C /* CCNode+CCBRelativePositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNode+CCBRelativePositioning.h"; sourceTree = "<group>"; };
 		825A96DD1693DA990084645C /* CCNode+CCBRelativePositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCNode+CCBRelativePositioning.m"; sourceTree = "<group>"; };
+		825B71CB16A1B51F00EEDC57 /* StageSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageSelect.h; sourceTree = "<group>"; };
+		825B71CC16A1B51F00EEDC57 /* StageSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageSelect.m; sourceTree = "<group>"; };
+		825B71CE16A1B64500EEDC57 /* BallonMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallonMenu.h; sourceTree = "<group>"; };
+		825B71CF16A1B64500EEDC57 /* BallonMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallonMenu.m; sourceTree = "<group>"; };
+		825B71DD16A1BA5300EEDC57 /* CCScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScrollLayer.h; sourceTree = "<group>"; };
+		825B71DE16A1BA5300EEDC57 /* CCScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCScrollLayer.m; sourceTree = "<group>"; };
+		825B71DF16A1BA5300EEDC57 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		825EE9A7169C6F1E00BF0115 /* FogAndStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FogAndStars.h; sourceTree = "<group>"; };
 		825EE9A8169C6F1E00BF0115 /* FogAndStars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FogAndStars.m; sourceTree = "<group>"; };
 		8278946B169B286400B41E0B /* ccb.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = ccb.zip; sourceTree = "<group>"; };
@@ -623,6 +633,7 @@
 		564C0F6D15DADBA0003DEE36 /* HappyFind */ = {
 			isa = PBXGroup;
 			children = (
+				825B6F3C16A1B47100EEDC57 /* StageSelect */,
 				825494D41695BF8800A9C536 /* Settings */,
 				56BE099916968AFE001D1FD2 /* startupLoading */,
 				82FEF7E6169468CC00729E6D /* About */,
@@ -665,6 +676,7 @@
 		564C0F8815DADBA0003DEE36 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				825B71DB16A1BA5300EEDC57 /* Extensions */,
 				56992ACA1693C6160045BABF /* asi-http-request */,
 				56573D6515DC3471007E6FDE /* CCBReader */,
 				56573D6815DC3471007E6FDE /* CCControlExtension */,
@@ -1257,6 +1269,35 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		825B6F3C16A1B47100EEDC57 /* StageSelect */ = {
+			isa = PBXGroup;
+			children = (
+				825B71CB16A1B51F00EEDC57 /* StageSelect.h */,
+				825B71CC16A1B51F00EEDC57 /* StageSelect.m */,
+				825B71CE16A1B64500EEDC57 /* BallonMenu.h */,
+				825B71CF16A1B64500EEDC57 /* BallonMenu.m */,
+			);
+			name = StageSelect;
+			sourceTree = "<group>";
+		};
+		825B71DB16A1BA5300EEDC57 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				825B71DC16A1BA5300EEDC57 /* CCScrollLayer */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		825B71DC16A1BA5300EEDC57 /* CCScrollLayer */ = {
+			isa = PBXGroup;
+			children = (
+				825B71DD16A1BA5300EEDC57 /* CCScrollLayer.h */,
+				825B71DE16A1BA5300EEDC57 /* CCScrollLayer.m */,
+				825B71DF16A1BA5300EEDC57 /* README.md */,
+			);
+			path = CCScrollLayer;
+			sourceTree = "<group>";
+		};
 		82FEF7DC1694578900729E6D /* MenuOptions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1344,6 +1385,7 @@
 				56C06B07169854210091316D /* icons.zip in Resources */,
 				8278946C169B286400B41E0B /* ccb.zip in Resources */,
 				56AF2D48169DA18C00D1CF46 /* Default-Landscape~ipad.png in Resources */,
+				825B71E116A1BA5300EEDC57 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1502,6 +1544,9 @@
 				56BE099F1696E8CC001D1FD2 /* CCBResDelegate.m in Sources */,
 				56C06B0A169858190091316D /* IconsResDelegate.m in Sources */,
 				825EE9A9169C6F1E00BF0115 /* FogAndStars.m in Sources */,
+				825B71CD16A1B51F00EEDC57 /* StageSelect.m in Sources */,
+				825B71D016A1B64500EEDC57 /* BallonMenu.m in Sources */,
+				825B71E016A1BA5300EEDC57 /* CCScrollLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
