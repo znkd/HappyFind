@@ -23,7 +23,7 @@
 	// Apple recommends to re-assign "self" with the "super" return value
     if((self = [super init]))
     {
-        m_pathOfServer = [[NSString alloc] initWithString:@"http://192.168.1.102/"];
+        m_pathOfServer = [[NSString alloc] initWithString:@"http://192.168.1.103/"];
         NSArray*    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         m_pathOfDoc = [[paths objectAtIndex:0] retain];
         m_tmpPathOfDoc = [[m_pathOfDoc stringByAppendingPathComponent:@"tmp"] retain];

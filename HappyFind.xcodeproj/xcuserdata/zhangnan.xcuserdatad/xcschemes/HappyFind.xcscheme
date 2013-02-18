@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "564C0F5615DADBA0003DEE36"
-               BuildableName = "HappyFind.app"
+               BuildableName = "HappyFind2.app"
                BlueprintName = "HappyFind"
                ReferencedContainer = "container:HappyFind.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "564C0F5615DADBA0003DEE36"
-            BuildableName = "HappyFind.app"
+            BuildableName = "HappyFind2.app"
             BlueprintName = "HappyFind"
             ReferencedContainer = "container:HappyFind.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "564C0F5615DADBA0003DEE36"
-            BuildableName = "HappyFind.app"
+            BuildableName = "HappyFind2.app"
             BlueprintName = "HappyFind"
             ReferencedContainer = "container:HappyFind.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "564C0F5615DADBA0003DEE36"
-            BuildableName = "HappyFind.app"
+            BuildableName = "HappyFind2.app"
             BlueprintName = "HappyFind"
             ReferencedContainer = "container:HappyFind.xcodeproj">
          </BuildableReference>

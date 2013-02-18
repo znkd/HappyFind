@@ -81,7 +81,7 @@
 	//[director_ pushScene: [IntroLayer scene]]; 
     
     m_gameCtl = [GameCtl sharedGameCtl];
-	[[CCDirector sharedDirector] runWithScene:[CCBReader sceneWithNodeGraphFromFile:@"menu.ccbi"]];
+	[[CCDirector sharedDirector] runWithScene:[CCBReader sceneWithNodeGraphFromFile:@"loading.ccbi"]];
     
 	// Create a Navigation Controller with the Director
 	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];

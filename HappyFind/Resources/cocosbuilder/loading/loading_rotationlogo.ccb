@@ -21,6 +21,52 @@
 		<key>children</key>
 		<array>
 			<dict>
+				<key>animatedProperties</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>rotation</key>
+						<dict>
+							<key>keyframes</key>
+							<array>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>rotation</string>
+									<key>time</key>
+									<real>0.0</real>
+									<key>type</key>
+									<integer>2</integer>
+									<key>value</key>
+									<real>0.0</real>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>rotation</string>
+									<key>time</key>
+									<real>2</real>
+									<key>type</key>
+									<integer>2</integer>
+									<key>value</key>
+									<real>360</real>
+								</dict>
+							</array>
+							<key>name</key>
+							<string>rotation</string>
+							<key>type</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+				</dict>
 				<key>baseClass</key>
 				<string>CCSprite</string>
 				<key>children</key>
@@ -28,7 +74,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>loadingBg</string>
+				<string>rotationLogo</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -43,7 +89,7 @@
 						<key>value</key>
 						<array>
 							<real>512</real>
-							<real>384</real>
+							<real>682</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -65,11 +111,21 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.5</real>
 							<false/>
 							<integer>0</integer>
 						</array>
+					</dict>
+					<dict>
+						<key>baseValue</key>
+						<real>0.0</real>
+						<key>name</key>
+						<string>rotation</string>
+						<key>type</key>
+						<string>Degrees</string>
+						<key>value</key>
+						<real>360</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -87,166 +143,18 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ui/background.png</string>
+							<string>loading/3p.png</string>
 						</array>
 					</dict>
 				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>Time</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>120</real>
-							<real>0.0</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string></string>
-							<string>ui/timebg.PNG</string>
-						</array>
-					</dict>
-				</array>
-				<key>selected</key>
+				<key>seqExpanded</key>
 				<true/>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>rotationLogoCCB</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>loading/loading_rotationlogo.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>TipCCB</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>loading/loadingTip.ccb</string>
-					</dict>
-				</array>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>Loading</string>
+		<string></string>
 		<key>displayName</key>
-		<string>Loading</string>
+		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
 		<string></string>
 		<key>memberVarAssignmentType</key>
@@ -260,9 +168,9 @@
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>1024</real>
-					<real>768</real>
-					<integer>0</integer>
+					<real>100</real>
+					<real>100</real>
+					<integer>1</integer>
 				</array>
 			</dict>
 			<dict>
@@ -307,7 +215,7 @@
 			<key>centeredOrigin</key>
 			<false/>
 			<key>ext</key>
-			<string>ipad</string>
+			<string>ipad hd</string>
 			<key>height</key>
 			<integer>768</integer>
 			<key>name</key>
@@ -326,17 +234,17 @@
 			<key>chainedSequenceId</key>
 			<integer>0</integer>
 			<key>length</key>
-			<real>8</real>
+			<real>2</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>2</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
-			<real>32</real>
+			<real>128</real>
 			<key>sequenceId</key>
 			<integer>0</integer>
 		</dict>

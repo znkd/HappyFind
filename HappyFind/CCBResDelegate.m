@@ -79,12 +79,18 @@
     NSString* src = m_versionServerPath;
     NSString* dst = [docPath stringByAppendingPathComponent:@"version"];
     [[NSFileManager defaultManager] moveItemAtPath: src toPath:dst error:nil];
+    
+    [m_control setProgressPercent:40];
 
     [m_control startIconsResRequest];
 }
 
 - (void)requestFailed:(ASIHTTPRequest*) request
 {
-    [m_control startIconsResRequest];
+    //[m_control startIconsResRequest];
+    [m_control setProgressPercent:100];
+    
+    [m_control performSelector:@selector(gotoMenuScene) withObject:nil afterDelay:0.5];
+    //[m_control gotoMenuScene];
 }
 @end

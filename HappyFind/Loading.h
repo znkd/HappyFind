@@ -13,6 +13,8 @@
 @class CCBResDelegate;
 @class IconsResDelegate;
 
+@class Reachability;
+
 @interface Loading : CCNode {
     
     OffLineRes*  m_ccbResRequest;
@@ -20,8 +22,26 @@
     
     OffLineRes*  m_iconsResRequest;
     IconsResDelegate* m_iconsResDelegate;
+    
+    CCSprite* m_timeBg;
+    NSInteger m_currentProgressTimerBarPercent;
+    NSInteger m_ProgressTimerBarTargetPercent;
+    
 }
+@property(atomic,assign) BOOL internetActive;
+@property(nonatomic,strong) Reachability* internetReachable;
+@property(nonatomic,strong) Reachability* hostReachable;
+@property(nonatomic,strong) Reachability* wifiReachable;
+@property(nonatomic,strong) NSCondition* condition;
+@property(nonatomic,strong) CCProgressTimer* ct;
+
+
+-(void) setProgressPercent:(NSInteger)integerPercent;
+
 -(void) startCCBResRequest;
 -(void) startIconsResRequest;
 -(void) gotoMenuScene;
+
+-(void) checkNetworkStatus:(NSNotification*)notice;
+
 @end

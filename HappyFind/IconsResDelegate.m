@@ -43,11 +43,15 @@
     NSFileManager *defaultManager;
     defaultManager = [NSFileManager defaultManager];
     [defaultManager removeItemAtPath:request.downloadDestinationPath  error:NULL];
-    
-    [m_control gotoMenuScene];
+    [m_control setProgressPercent:100];
+    [m_control performSelector:@selector(gotoMenuScene) withObject:nil afterDelay:0.5];
+    //[m_control gotoMenuScene];
 }
 - (void)requestFailed:(ASIHTTPRequest*) request
 {
+    [m_control setProgressPercent:100];
     
+    [m_control performSelector:@selector(gotoMenuScene) withObject:nil afterDelay:0.5];
+    //[m_control gotoMenuScene];
 }
 @end

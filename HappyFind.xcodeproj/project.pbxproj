@@ -177,6 +177,7 @@
 		56C06B02169830300091316D /* stage0.zip in Resources */ = {isa = PBXBuildFile; fileRef = 56C06B00169830300091316D /* stage0.zip */; };
 		56C06B07169854210091316D /* icons.zip in Resources */ = {isa = PBXBuildFile; fileRef = 56C06B06169854210091316D /* icons.zip */; };
 		56C06B0A169858190091316D /* IconsResDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C06B09169858190091316D /* IconsResDelegate.m */; };
+		6DA9CF5616BAA39900E2B4DB /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9CF5516BAA39900E2B4DB /* UserData.m */; };
 		825494CA1695913500A9C536 /* CCBAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96D51693DA990084645C /* CCBAnimationManager.m */; };
 		825494CB1695913500A9C536 /* CCBKeyframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96D71693DA990084645C /* CCBKeyframe.m */; };
 		825494CC1695913500A9C536 /* CCBSequenceProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A96DB1693DA990084645C /* CCBSequenceProperty.m */; };
@@ -194,7 +195,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		564C0F5715DADBA0003DEE36 /* HappyFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		564C0F5715DADBA0003DEE36 /* HappyFind2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyFind2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564C0F5B15DADBA0003DEE36 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		564C0F5D15DADBA0003DEE36 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		564C0F5F15DADBA0003DEE36 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -540,6 +541,8 @@
 		56C06B06169854210091316D /* icons.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = icons.zip; sourceTree = "<group>"; };
 		56C06B08169858190091316D /* IconsResDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconsResDelegate.h; sourceTree = "<group>"; };
 		56C06B09169858190091316D /* IconsResDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconsResDelegate.m; sourceTree = "<group>"; };
+		6DA9CF5416BAA39900E2B4DB /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
+		6DA9CF5516BAA39900E2B4DB /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
 		825494D61695BFE800A9C536 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		825494D71695BFE800A9C536 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		825A96D41693DA990084645C /* CCBAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBAnimationManager.h; sourceTree = "<group>"; };
@@ -605,7 +608,7 @@
 		564C0F5815DADBA0003DEE36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				564C0F5715DADBA0003DEE36 /* HappyFind.app */,
+				564C0F5715DADBA0003DEE36 /* HappyFind2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 		564C0F6D15DADBA0003DEE36 /* HappyFind */ = {
 			isa = PBXGroup;
 			children = (
+				6DA9CF5216BAA37300E2B4DB /* Element */,
 				825B6F3C16A1B47100EEDC57 /* StageSelect */,
 				825494D41695BF8800A9C536 /* Settings */,
 				56BE099916968AFE001D1FD2 /* startupLoading */,
@@ -1260,6 +1264,15 @@
 			name = startupLoading;
 			sourceTree = "<group>";
 		};
+		6DA9CF5216BAA37300E2B4DB /* Element */ = {
+			isa = PBXGroup;
+			children = (
+				6DA9CF5416BAA39900E2B4DB /* UserData.h */,
+				6DA9CF5516BAA39900E2B4DB /* UserData.m */,
+			);
+			name = Element;
+			sourceTree = "<group>";
+		};
 		825494D41695BF8800A9C536 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1333,7 +1346,7 @@
 			);
 			name = HappyFind;
 			productName = HappyFind;
-			productReference = 564C0F5715DADBA0003DEE36 /* HappyFind.app */;
+			productReference = 564C0F5715DADBA0003DEE36 /* HappyFind2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1547,6 +1560,7 @@
 				825B71CD16A1B51F00EEDC57 /* StageSelect.m in Sources */,
 				825B71D016A1B64500EEDC57 /* BallonMenu.m in Sources */,
 				825B71E016A1BA5300EEDC57 /* CCScrollLayer.m in Sources */,
+				6DA9CF5616BAA39900E2B4DB /* UserData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1618,7 +1632,7 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HappyFind2;
 				PROVISIONING_PROFILE = "BB7C67DB-77B2-479C-857E-E37B44A3E5EB";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -1645,7 +1659,7 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HappyFind2;
 				PROVISIONING_PROFILE = "BB7C67DB-77B2-479C-857E-E37B44A3E5EB";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
