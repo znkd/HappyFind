@@ -25,4 +25,5 @@
 @property(nonatomic,strong) CCNode* m_spriteIcon5;
 @property(nonatomic,strong) CCNode* m_spriteIcon6;
 @property(nonatomic,strong) CCNode* m_spriteIcon7;
+
 @end

@@ -133,6 +133,8 @@
 
 -(void) initWaitingRoom
 {
+    [self startGame:nil];
+    
     //player info
     int iNumOfPlayer=2;
     BOOL bIsMale1 = FALSE;

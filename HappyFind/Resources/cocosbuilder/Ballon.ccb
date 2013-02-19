@@ -273,8 +273,8 @@
 										<string>Block</string>
 										<key>value</key>
 										<array>
-											<string></string>
-											<integer>0</integer>
+											<string>selectBallonOne</string>
+											<integer>1</integer>
 										</array>
 									</dict>
 									<dict>
@@ -503,8 +503,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>137.99337768554688</real>
-							<real>403.4503173828125</real>
+							<real>135</real>
+							<real>381</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -739,8 +739,8 @@
 										<string>Block</string>
 										<key>value</key>
 										<array>
-											<string></string>
-											<integer>0</integer>
+											<string>selectBallonTwo</string>
+											<integer>1</integer>
 										</array>
 									</dict>
 									<dict>
@@ -969,8 +969,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>513.3377685546875</real>
-							<real>551.01324462890625</real>
+							<real>553</real>
+							<real>557</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1193,8 +1193,8 @@
 										<string>Block</string>
 										<key>value</key>
 										<array>
-											<string></string>
-											<integer>0</integer>
+											<string>selectBallonThree</string>
+											<integer>1</integer>
 										</array>
 									</dict>
 									<dict>
@@ -1411,8 +1411,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>267.96688842773438</real>
-							<real>119.95364379882812</real>
+							<real>253</real>
+							<real>99</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1635,8 +1635,8 @@
 										<string>Block</string>
 										<key>value</key>
 										<array>
-											<string></string>
-											<integer>0</integer>
+											<string>selectBallonFour</string>
+											<integer>1</integer>
 										</array>
 									</dict>
 									<dict>
@@ -1865,8 +1865,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>414.42666625976562</real>
-							<real>301.10665893554688</real>
+							<real>431</real>
+							<real>277</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2091,8 +2091,8 @@
 										<string>Block</string>
 										<key>value</key>
 										<array>
-											<string></string>
-											<integer>0</integer>
+											<string>selectBallonFive</string>
+											<integer>1</integer>
 										</array>
 									</dict>
 									<dict>
@@ -2321,8 +2321,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>740.0133056640625</real>
-							<real>414.09332275390625</real>
+							<real>737</real>
+							<real>393</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2545,8 +2545,8 @@
 										<string>Block</string>
 										<key>value</key>
 										<array>
-											<string></string>
-											<integer>0</integer>
+											<string>selectBallonSix</string>
+											<integer>1</integer>
 										</array>
 									</dict>
 									<dict>
@@ -2763,8 +2763,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>629.52001953125</real>
-							<real>152.09333801269531</real>
+							<real>625</real>
+							<real>131</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2987,8 +2987,8 @@
 										<string>Block</string>
 										<key>value</key>
 										<array>
-											<string></string>
-											<integer>0</integer>
+											<string>selectBallonSeven</string>
+											<integer>1</integer>
 										</array>
 									</dict>
 									<dict>
@@ -3205,8 +3205,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>912.50665283203125</real>
-							<real>185.62666320800781</real>
+							<real>911</real>
+							<real>157</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -3336,7 +3336,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>3.7666666507720947</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
