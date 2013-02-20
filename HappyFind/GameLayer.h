@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+@interface CCAnimation(Helper)
++(CCAnimation*) animationWithFile:(NSString*)name frameCount:(int)frameCount delay:(float)delay;
+@end
 
 @interface GameLayer : CCLayer {
     
@@ -29,6 +32,12 @@
     CCLayerColor* m_readGoLayer;
     CCSprite*   m_ready;
     CCSprite*   m_go;
+    
+    CCSprite* m_key1;
+    CCSprite* m_key2;
+    CCSprite* m_key3;
+    CCSprite* m_key4;
+    CCSprite* m_key5;
     
     CCNode*   m_playerStatusNodeRoot;
     CCSprite* m_playerStatusBg;
@@ -54,7 +63,7 @@
     //player info
     NSString*           m_nameOfPlayer1;
     BOOL                m_isMale;
-    
+
     enum
     {
         GAMELAYER_IDLE,
@@ -65,5 +74,7 @@
         GAMELAYER_SUCESS,
     }GAMELAYER_STATUS;
 }
+
+@property(nonatomic,strong) CCProgressTimer* ct;
 
 @end

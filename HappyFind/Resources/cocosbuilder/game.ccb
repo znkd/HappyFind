@@ -174,9 +174,9 @@
 				<key>displayName</key>
 				<string>key1</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>m_key1</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -246,9 +246,9 @@
 				<key>displayName</key>
 				<string>key2</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>m_key2</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -318,9 +318,9 @@
 				<key>displayName</key>
 				<string>key3</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>m_key3</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -390,9 +390,9 @@
 				<key>displayName</key>
 				<string>key4</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>m_key4</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -462,9 +462,9 @@
 				<key>displayName</key>
 				<string>key5</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>m_key5</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -523,6 +523,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>

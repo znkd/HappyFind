@@ -11,8 +11,27 @@
 #import "SimpleAudioEngine.h"
 #import "sprite+texture.h"
 
+@implementation CCAnimation(Helper)
++(CCAnimation*) animationWithFile:(NSString*)name frameCount:(int)frameCount delay:(float)delay
+{
+    NSMutableArray* frames = [NSMutableArray arrayWithCapacity:frameCount];
+    for(int i =0; i<frameCount; i++)
+    {
+        NSString* file = [NSString stringWithFormat:@"%drb.png",30*(i+1)];
+        CCTexture2D* texture = [[CCTextureCache sharedTextureCache] addImage:file];
+        
+        CGSize texSize = texture.contentSize;
+        CGRect texRect = CGRectMake(0, 0, texSize.width, texSize.height);
+        CCSpriteFrame* frame = [CCSpriteFrame frameWithTexture:texture rect:texRect];
+        [frames addObject:frame];
+    }
+    //return [CCAnimation animationWithName:name delay:delay frames:frames];
+    return [CCAnimation animationWithSpriteFrames:frames delay:delay];
+}
+@end
 
 @implementation GameLayer
+@synthesize ct;
 
 -(void) randStateAndLevel
 {
@@ -124,6 +143,15 @@
 
 -(void) startGame:(id)sender
 {
+    NSArray*    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString*   docPath = [paths objectAtIndex:0];
+    NSString*   tmp = [docPath stringByAppendingPathComponent:@"ccb"];
+    [m_key1 setTextureWithFile:[tmp stringByAppendingPathComponent:@"key.png"]];
+    [m_key2 setTextureWithFile:[tmp stringByAppendingPathComponent:@"key.png"]];
+    [m_key3 setTextureWithFile:[tmp stringByAppendingPathComponent:@"key.png"]];
+    [m_key4 setTextureWithFile:[tmp stringByAppendingPathComponent:@"key.png"]];
+    [m_key5 setTextureWithFile:[tmp stringByAppendingPathComponent:@"key.png"]];
+    
     //1:hide waiting room
     [self hideWaitingRoom];
     
@@ -222,6 +250,51 @@
 - (void) didLoadFromCCB
 {    
     [self initWaitingRoom];
+    //position:(120,0)
+    CCSprite* timeProgress = [[CCSprite alloc]initWithFile:@"time.png"];
+    
+    self.ct = [[CCProgressTimer alloc]initWithSprite:timeProgress];
+    self.ct.percentage = 100;
+    self.ct.type = kCCProgressTimerTypeBar;
+    self.ct.anchorPoint = CGPointMake(0, 0);
+    [self.ct setMidpoint:CGPointMake(0, 0)];
+    [self.ct setBarChangeRate:ccp(1,0)];
+    self.ct.position = CGPointMake(10.0f, 24.0f);
+    [self addChild:self.ct];
+    
+    [self schedule:@selector(updateBar) interval:0.5];
+    
+}
+- (void) dealloc
+{
+    [self unschedule:@selector(updateBar)];
+    [super dealloc];
+}
+
+
+-(void) updateBar
+{
+    CCProgressTimer* bar = self.ct;
+    bar.percentage--;
+
+    if(bar.percentage <= 0)//failed
+    {
+        bar.percentage = 0;
+        
+        [self unschedule:@selector(updateBar)];
+        //show failed level
+        //[self showLevelFailedLayer];
+    }
+    else
+    {
+        //if(m_openStarNum == [m_starIcon count])
+        //{
+        //    [self unschedule:@selector(updateBar)];
+            //show pass level
+            //[self nextLevel];
+        //}
+    }
+
 }
 
 - (void) openStar
@@ -230,22 +303,32 @@
     if(m_iNumOfFind >5)
         m_iNumOfFind = 5;
     
+    //ccb.zip from tmp unzip to doc
+    NSArray*    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString*   docPath = [paths objectAtIndex:0];
+    NSString*   tmp = [docPath stringByAppendingPathComponent:@"ccb"];
+                       
     switch (m_iNumOfFind) 
     {
         case 1:
             //[m_star1 setVisible:YES];
+            [m_key1 setTextureWithFile:[tmp stringByAppendingPathComponent:@"keyok.png"]];
             break;
         case 2:
             //[m_star2 setVisible:YES];
+            [m_key2 setTextureWithFile:[tmp stringByAppendingPathComponent:@"keyok.png"]];
             break;
         case 3:
             //[m_star3 setVisible:YES];
+            [m_key3 setTextureWithFile:[tmp stringByAppendingPathComponent:@"keyok.png"]];
             break;
         case 4:
             //[m_star4 setVisible:YES];
+            [m_key4 setTextureWithFile:[tmp stringByAppendingPathComponent:@"keyok.png"]];
             break;
         case 5:
             //[m_star5 setVisible:YES];
+            [m_key5 setTextureWithFile:[tmp stringByAppendingPathComponent:@"keyok.png"]];
             break;
             
         default:
@@ -284,7 +367,7 @@
         {
             //open star
             [self openStar];
-#if 0
+#if 1
             //run action
             CCAnimation* anim = [CCAnimation animationWithFile:@"touch frame" frameCount:12 delay:0.02f];
             CCAnimate* animate = [CCAnimate actionWithAnimation:anim];
@@ -319,8 +402,8 @@
 #endif
     
     [[SimpleAudioEngine sharedEngine]playEffect:@"error.mp3"];
-	//CCProgressTimer* bar = (CCProgressTimer*)[self getChildByTag:tag_pbar];
-	//bar.percentage -= 4;
+	
+
 	
     return YES; //这儿如果返回NO 此次触摸将被忽略
 }

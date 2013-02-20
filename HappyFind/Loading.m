@@ -103,6 +103,7 @@
     self.ct.type = kCCProgressTimerTypeBar;
     self.ct.anchorPoint = CGPointMake(0, 0);
     [self.ct setMidpoint:CGPointMake(0, 0)];
+    [self.ct setBarChangeRate:ccp(1,0)];
     self.ct.position = CGPointMake(120.0f, 0.0f);
     [self addChild:self.ct];
     
