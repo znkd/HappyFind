@@ -10,7 +10,8 @@
 #import "GameCtl.h"
 #import "SimpleAudioEngine.h"
 #import "sprite+texture.h"
-
+#import "CCBReader.h"
+#import "AppDelegate.h"
 @implementation CCAnimation(Helper)
 +(CCAnimation*) animationWithFile:(NSString*)name frameCount:(int)frameCount delay:(float)delay
 {
@@ -248,8 +249,7 @@
 // by CCBReader. Do any additional initiation here. If no extra
 // initialization is needed, leave this method out.
 - (void) didLoadFromCCB
-{    
-    [self initWaitingRoom];
+{
     //position:(120,0)
     CCSprite* timeProgress = [[CCSprite alloc]initWithFile:@"time.png"];
     
@@ -262,6 +262,9 @@
     self.ct.position = CGPointMake(10.0f, 24.0f);
     [self addChild:self.ct];
     
+    [self initWaitingRoom];
+
+    
     [self schedule:@selector(updateBar) interval:0.5];
     
 }
@@ -271,6 +274,29 @@
     [super dealloc];
 }
 
+- (void)pause
+{
+    self.isTouchEnabled = NO;
+    [self addChild:[CCBReader nodeGraphFromFile:@"pauseGame.ccbi"]];
+    
+    //if (![HappyDifferenceAppDelegate get].paused) {
+	//	[HappyDifferenceAppDelegate get].paused = YES;
+	//	[super onExit];
+	//}
+    
+}
+
+/*-(void) resume
+{
+	if (![AppController get].paused) {
+		return ;
+	}
+	
+    [self.parent removeChild:m_pauseLayer cleanup:YES];
+    
+	[AppDelegate get].paused = NO;
+	[super onEnter];
+}*/
 
 -(void) updateBar
 {
@@ -282,8 +308,11 @@
         bar.percentage = 0;
         
         [self unschedule:@selector(updateBar)];
+        self.isTouchEnabled = NO;
+        
         //show failed level
-        //[self showLevelFailedLayer];
+        CCNode* node = [CCBReader nodeGraphFromFile:@"failed.ccbi"];
+        [self addChild:node];
     }
     else
     {
@@ -403,7 +432,7 @@
     
     [[SimpleAudioEngine sharedEngine]playEffect:@"error.mp3"];
 	
-
+    self.ct.percentage -= 15;
 	
     return YES; //这儿如果返回NO 此次触摸将被忽略
 }

@@ -338,10 +338,10 @@ enum
 {	
 #if COCOS2D_VERSION >= 0x00020000
     CCTouchDispatcher *dispatcher = [[CCDirector sharedDirector] touchDispatcher];
-    int priority = kCCMenuHandlerPriority - 1;
+    int priority = kCCMenuHandlerPriority;// - 1;
 #else
     CCTouchDispatcher *dispatcher = [CCTouchDispatcher sharedDispatcher];
-    int priority = kCCMenuTouchPriority - 1;
+    int priority = kCCMenuTouchPriority;// - 1;
 #endif
     
 	[dispatcher addTargetedDelegate:self priority: priority swallowsTouches:NO];    

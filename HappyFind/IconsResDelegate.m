@@ -36,7 +36,7 @@
     NSString*   tmp = [[docPath stringByAppendingPathComponent:@"iPad"] stringByAppendingPathComponent:@"tmp"];
     [[NSFileManager defaultManager] createDirectoryAtPath:tmp withIntermediateDirectories:YES attributes:nil error:nil];
 
-    NSString*   unzipPath = [tmp stringByAppendingPathComponent:@"icons"];
+    NSString*   unzipPath = [tmp stringByAppendingPathComponent:@"stages"];
     //unzip
     [SSZipArchive unzipFileAtPath:request.downloadDestinationPath toDestination:unzipPath];
     //delete .zip

@@ -7,15 +7,18 @@
 //
 
 #import "CCNode.h"
-#import "BallonMenu.h"
 #import "CCScrollLayer.h"
+#import "CCBReader.h"
+
+@interface CCBReader (HappyFind)
+-(CCScene*) sceneWithStage:(CCScene*)scene stage:(int)stage;
+@end
 
 @interface StageSelect : CCNode
+{
+    
+}
 
-@property(nonatomic,assign) int m_StagesCount;
-@property(nonatomic,strong) CCScrollLayer* stageLayer;
-//@property(nonatomic,strong) BallonMenu* ballonNode;
-//@property(nonatomic,strong) BallonMenu* ballon2Node;
-//@property(nonatomic,strong) BallonMenu* ballon3Node;
-@property(nonatomic,strong) NSMutableArray* ballonArr;
+@property(nonatomic,assign) int m_stageCount;
+@property(nonatomic,strong) CCScrollLayer* m_scrollLayer;
 @end

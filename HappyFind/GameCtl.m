@@ -36,11 +36,10 @@ static GameCtl* _sharedGameCtl = nil;
             [SSZipArchive unzipFileAtPath:src toDestination:dst];
         }
         NSString*   iPadPath = [docPath stringByAppendingPathComponent:@"iPad"];
-        if(![[NSFileManager defaultManager] fileExistsAtPath:[iPadPath stringByAppendingPathComponent:@"icons"]])
+        if(![[NSFileManager defaultManager] fileExistsAtPath:[iPadPath stringByAppendingPathComponent:@"stages"]])
         {//the first startup from app folder to get stage0.zip
-            NSString* dst = [iPadPath stringByAppendingPathComponent:@"icons"];
-            [[NSFileManager defaultManager] createDirectoryAtPath:dst withIntermediateDirectories:YES attributes:nil error:nil];
-            NSString* src = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"icons.zip"];
+            NSString* dst = iPadPath;
+            NSString* src = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"stages.zip"];
             //unzip
             [SSZipArchive unzipFileAtPath:src toDestination:dst];
         }

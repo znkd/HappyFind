@@ -124,8 +124,8 @@
     m_ccbResRequest = [[OffLineRes alloc] initWithDelegate:m_ccbDelegate];
     [m_ccbResRequest RequestAStartsynchronous:@"version"];
     
-    m_iconsResDelegate = [[IconsResDelegate alloc] initWithControl:self];
-    m_iconsResRequest =[[OffLineRes alloc] initWithDelegate:m_iconsResDelegate];
+    //m_iconsResDelegate = [[IconsResDelegate alloc] initWithControl:self];
+    //m_iconsResRequest =[[OffLineRes alloc] initWithDelegate:m_iconsResDelegate];
     
 //    [self.condition unlock];
 }
