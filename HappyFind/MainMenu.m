@@ -31,6 +31,14 @@
 
 -(void)changeScene
 {
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"stage.ccbi"]];
+    //[[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"stage.ccbi"]];
+    [[CCDirector sharedDirector] pushScene:[CCBReader sceneWithNodeGraphFromFile:@"stage.ccbi"]];
+    
+    [self performSelector:@selector(changeAnimate) withObject:nil afterDelay:0.6];
+}
+
+- (void)changeAnimate
+{
+    [m_fogAndStars performDefaultFogAnimation];
 }
 @end

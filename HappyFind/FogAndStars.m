@@ -29,4 +29,13 @@
     
     [animationManager runAnimationsForSequenceNamed:@"ComeIn_Timeline"];
 }
+
+-(void) performDefaultFogAnimation
+{
+    CCBAnimationManager* animationManager = self.userObject;
+    
+    NSLog(@"animationManager: %@", animationManager);
+    
+    [animationManager runAnimationsForSequenceNamed:@"Default Timeline"];
+}
 @end

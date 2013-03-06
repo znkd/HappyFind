@@ -11,7 +11,7 @@
 #import "CCScrollLayer.h"
 #import "CCBReader.h"
 #import "Tip.h"
-
+#import "StageSelect.h"
 @implementation LevelSelect
 @synthesize m_scrollLayer,m_stageNo;
 
@@ -23,6 +23,32 @@
 {
     m_stageNo = stageNumber;
 }
+-(id)init
+{
+    self = [super init];
+    if (self) {
+        
+        CCNode* parent = self.parent;
+        
+        StageSelect* gameStage = nil;
+        
+        CCArray* stageChildren = [parent children];
+        
+        for (id child in stageChildren) {
+            if([child isKindOfClass:[StageSelect class]])
+            {
+                gameStage = child;
+                
+                m_stageNo = [gameStage getCurrentStageNo];
+                break;
+            }
+        }
+
+    }
+    
+    return self;
+}
+
 -(void) dealloc
 {
     [m_scrollLayer release];
@@ -30,9 +56,12 @@
 }
 - (void) didLoadFromCCB
 {
-    
+}
+
+-(void)initGameIcons:(int)stageNo
+{
     NSArray*    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString*   docPath = [paths objectAtIndex:0];        
+    NSString*   docPath = [paths objectAtIndex:0];
     
     //find stage folder
     int iLevelNum = 0;
@@ -46,7 +75,7 @@
         folderPath = [[[iPadPath stringByAppendingPathComponent:@"stages"] stringByAppendingPathComponent:stage] stringByAppendingPathComponent:level];
         iLevelNum++;
     }
-
+    
     int scrollLayerCount = iLevelNum/7 + (iLevelNum%7 == 0?0:1);
     
     NSMutableArray* arrSprites = [[NSMutableArray alloc]initWithCapacity:1];
@@ -75,7 +104,7 @@
         [arrSprites addObject:ballonM.m_spriteIcon7];
         
         [layers addObject:ballonM];
-       
+        
     }
     
     if (iLevelNum > 0) {
@@ -93,7 +122,7 @@
                 [[arrSprites objectAtIndex:idx] addChild:sprite];
             }
         }
-
+        
     }
     [arrSprites release];
     
@@ -102,11 +131,14 @@
     m_scrollLayer = [[CCScrollLayer alloc]initWithLayers:layers widthOffset:0*winsize.width];
     [m_scroll addChild:m_scrollLayer];
     [layers release];
+
 }
 
 - (void)backToStage
 {
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"stage.ccbi"]];
+    //[[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"stage.ccbi"]];
+    //[[CCDirector sharedDirector] popScene];
+    [self removeFromParentAndCleanup:YES];
 }
 -(void)selectBallon:(id)sender
 {

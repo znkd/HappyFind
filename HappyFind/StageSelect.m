@@ -42,31 +42,24 @@
 
 - (void)goToLevel
 {
-    CCScene* levelScene = [CCBReader sceneWithNodeGraphFromFile:@"level.ccbi"];
+
+    CCNode* level = [CCBReader nodeGraphFromFile:@"level.ccbi"];
     
-    LevelSelect* gameStageLevel = nil;
-    
-    CCArray* stageChildren = [levelScene children];
-    
-    for (id child in stageChildren) {
-        if([child isKindOfClass:[LevelSelect class]])
-        {
-            gameStageLevel = child;
-            break;
-        }
-    }
+    LevelSelect* gameStageLevel = level;
+
     
     if (gameStageLevel) {
-        [gameStageLevel setStageNumber:8];
-        
-        [[CCDirector sharedDirector] replaceScene:levelScene];
+
+        LevelSelect* levelObj = level;
+        [levelObj initGameIcons:2];
+        [self addChild:levelObj];
     }
 
 }
 
 - (void)backToMenu
 {
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"menu.ccbi"]];
+    [[CCDirector sharedDirector] popScene];
 }
 
 @end

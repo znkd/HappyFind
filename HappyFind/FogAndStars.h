@@ -10,4 +10,5 @@
 
 @interface FogAndStars : CCNode
 -(void) performFogComeIn;
+-(void) performDefaultFogAnimation;
 @end

@@ -21,6 +21,7 @@
 
 @property(nonatomic,assign) int m_stageNo;
 
+-(void)initGameIcons:(int)stageNo;
 -(void)setStageNumber:(int)stageNumber;
 -(void)addTip;
 @end
