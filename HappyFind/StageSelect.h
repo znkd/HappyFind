@@ -10,13 +10,10 @@
 #import "CCScrollLayer.h"
 #import "CCBReader.h"
 
-@interface CCBReader (HappyFind)
--(CCScene*) sceneWithStage:(CCScene*)scene stage:(int)stage;
-@end
 
 @interface StageSelect : CCNode
 {
-    
+    CCNode* m_scroll;
 }
 
 @property(nonatomic,assign) int m_stageCount;

@@ -162,7 +162,7 @@
 -(void) gotoMenuScene
 {
     self.ct.percentage = 0;
-    [[CCDirector sharedDirector] runWithScene:[CCBReader sceneWithNodeGraphFromFile:@"menu.ccbi"]];
+    [[CCDirector sharedDirector] pushScene:[CCBReader sceneWithNodeGraphFromFile:@"menu.ccbi"]];
 }
 
 @end

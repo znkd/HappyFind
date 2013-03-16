@@ -7,59 +7,54 @@
 //
 
 #import "StageSelect.h"
+
 #import "CCBReader.h"
-#import "SSZipArchive.h"
-#import "LevelSelect.h"
-
-@implementation CCBReader (HappyFind)
-
--(CCScene*) sceneWithStage:(CCScene*)scene stage:(int)stage
-{
-    LevelSelect* gameStageLevel = nil;
-    
-    CCArray* stageChildren = [scene children];
-    
-    for (id child in stageChildren) {
-        [child isKindOfClass:[LevelSelect class]];
-        gameStageLevel = child;
-    }
-    
-    [gameStageLevel setStageNumber:stage];
-    
-    return scene;
-}
-
-@end
+#import "CCScrollLayer.h"
+#import "Stage.h"
 
 @implementation StageSelect
 @synthesize m_stageCount,m_scrollLayer;
 
 - (void) didLoadFromCCB
 {
-
-    
-}
-
-- (void)goToLevel
-{
-
-    CCNode* level = [CCBReader nodeGraphFromFile:@"level.ccbi"];
-    
-    LevelSelect* gameStageLevel = level;
-
-    
-    if (gameStageLevel) {
-
-        LevelSelect* levelObj = level;
-        [levelObj initGameIcons:2];
-        [self addChild:levelObj];
+    NSMutableArray* layers;
+    layers = [[NSMutableArray alloc] initWithCapacity:1];
+    //find stage folder
+    NSArray*    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString*   docPath = [paths objectAtIndex:0];
+    int iStageNum = 0;
+    NSString*   iPadPath = [docPath stringByAppendingPathComponent:@"iPad"];
+    NSString* stageFolderName = [NSString stringWithFormat:@"stage%d",iStageNum];
+    NSString* folderPath = [[iPadPath stringByAppendingPathComponent:@"stages"] stringByAppendingPathComponent:stageFolderName];
+    while ([[NSFileManager defaultManager] fileExistsAtPath:folderPath]) {
+        
+        Stage* stage = (Stage*)[CCBReader nodeGraphFromFile:@"stage.ccbi"];
+        [stage setIconFilePath:folderPath withStageNo:iStageNum];
+        [layers addObject:stage];
+        
+        iStageNum++;
+        NSString* stageFolderName = [NSString stringWithFormat:@"stage%d",iStageNum];
+        folderPath = [[iPadPath stringByAppendingPathComponent:@"stages"] stringByAppendingPathComponent:stageFolderName];
     }
-
+    
+    //add to scroll layer
+    CGSize winsize = [[CCDirector sharedDirector] winSize];
+    m_scrollLayer = [[CCScrollLayer alloc]initWithLayers:layers widthOffset:0.6*winsize.width];
+    [m_scroll addChild:m_scrollLayer];
+    [layers release];
+    
 }
+
+
 
 - (void)backToMenu
 {
     [[CCDirector sharedDirector] popScene];
 }
 
+- (void)dealloc
+{
+    [m_scrollLayer release];
+    [super dealloc];
+}
 @end

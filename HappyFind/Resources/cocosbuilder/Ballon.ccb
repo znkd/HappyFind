@@ -264,7 +264,7 @@
 										<key>type</key>
 										<string>Integer</string>
 										<key>value</key>
-										<integer>1</integer>
+										<integer>0</integer>
 									</dict>
 									<dict>
 										<key>name</key>
@@ -1135,6 +1135,22 @@
 														<key>type</key>
 														<integer>1</integer>
 													</dict>
+													<key>time</key>
+													<real>0.0</real>
+													<key>type</key>
+													<integer>3</integer>
+													<key>value</key>
+													<array>
+														<real>-4</real>
+														<real>80</real>
+													</array>
+												</dict>
+												<dict>
+													<key>easing</key>
+													<dict>
+														<key>type</key>
+														<integer>1</integer>
+													</dict>
 													<key>name</key>
 													<string>position</string>
 													<key>time</key>
@@ -1182,7 +1198,7 @@
 										<key>value</key>
 										<array>
 											<real>-4</real>
-											<real>78</real>
+											<real>80</real>
 											<integer>0</integer>
 										</array>
 									</dict>
@@ -1216,7 +1232,7 @@
 										<key>type</key>
 										<string>Integer</string>
 										<key>value</key>
-										<integer>3</integer>
+										<integer>1</integer>
 									</dict>
 									<dict>
 										<key>name</key>
@@ -1674,7 +1690,7 @@
 										<key>type</key>
 										<string>Integer</string>
 										<key>value</key>
-										<integer>4</integer>
+										<integer>3</integer>
 									</dict>
 									<dict>
 										<key>name</key>
@@ -2616,7 +2632,7 @@
 										<key>type</key>
 										<string>Integer</string>
 										<key>value</key>
-										<integer>6</integer>
+										<integer>4</integer>
 									</dict>
 									<dict>
 										<key>name</key>
@@ -3074,7 +3090,7 @@
 										<key>type</key>
 										<string>Integer</string>
 										<key>value</key>
-										<integer>7</integer>
+										<integer>6</integer>
 									</dict>
 									<dict>
 										<key>name</key>

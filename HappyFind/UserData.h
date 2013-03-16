@@ -17,10 +17,10 @@
 +(UserData*) sharedUserData;
 -(void) saveData;
 @property (assign) int    m_isSound;
-@property (assign)  int     m_iPassStageNo;
+@property (assign) int     m_iPassStageNo;
 @property (assign) int    m_iPassLevel;
 @property (assign) NSMutableArray*   m_passScoreAry;
-@property int   m_iHighScore;
+@property (assign) int   m_iHighScore;
 
 
 @end

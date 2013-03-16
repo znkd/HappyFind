@@ -26,6 +26,12 @@
 			<key>position</key>
 			<real>-105</real>
 		</dict>
+		<dict>
+			<key>orientation</key>
+			<integer>0</integer>
+			<key>position</key>
+			<real>-217</real>
+		</dict>
 	</array>
 	<key>nodeGraph</key>
 	<dict>
@@ -934,6 +940,8 @@
 						<string>settings.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>

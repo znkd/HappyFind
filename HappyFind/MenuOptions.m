@@ -41,7 +41,7 @@
 
 -(void) onAboutClick
 {
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"about.ccbi"]];
+    [[CCDirector sharedDirector] pushScene:[CCBReader sceneWithNodeGraphFromFile:@"about.ccbi"]];
 }
 
 @end

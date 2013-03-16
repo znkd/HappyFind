@@ -7,9 +7,9 @@
 //
 
 #import "MainMenu.h"
-#import "cocos2d.h"
-#import "CCBReader.h"
 
+#import "CCBReader.h"
+#import "FogAndStars.h"
 
 @implementation MainMenu
 // This method is called right after the class has been instantiated
@@ -31,8 +31,7 @@
 
 -(void)changeScene
 {
-    //[[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"stage.ccbi"]];
-    [[CCDirector sharedDirector] pushScene:[CCBReader sceneWithNodeGraphFromFile:@"stage.ccbi"]];
+    [[CCDirector sharedDirector] pushScene:[CCBReader sceneWithNodeGraphFromFile:@"stagebk.ccbi"]];
     
     [self performSelector:@selector(changeAnimate) withObject:nil afterDelay:0.6];
 }

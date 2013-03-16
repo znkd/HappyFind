@@ -24,7 +24,7 @@
 {
     [self unschedule:@selector(update)];
     
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"menu.ccbi"]];
+    [[CCDirector sharedDirector] popScene];
 }
 
 -(void) update:(ccTime)delta

@@ -178,6 +178,7 @@
 		56C06B0A169858190091316D /* IconsResDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C06B09169858190091316D /* IconsResDelegate.m */; };
 		6D9F647716E2F69F009E761E /* Ballon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9F647616E2F69F009E761E /* Ballon.m */; };
 		6D9F647916E36074009E761E /* stages.zip in Resources */ = {isa = PBXBuildFile; fileRef = 6D9F647816E36074009E761E /* stages.zip */; };
+		6DA26B0216E8E56800FFB901 /* Stage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA26B0116E8E56800FFB901 /* Stage.m */; };
 		6DA972B316D854CB00269807 /* Tip.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA972B216D854CB00269807 /* Tip.m */; };
 		6DA972B816D861D900269807 /* FailedLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA972B716D861D900269807 /* FailedLevel.m */; };
 		6DA972BB16D8F7C600269807 /* pauseGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA972BA16D8F7C600269807 /* pauseGame.m */; };
@@ -547,6 +548,8 @@
 		6D9F647516E2F69F009E761E /* Ballon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ballon.h; sourceTree = "<group>"; };
 		6D9F647616E2F69F009E761E /* Ballon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ballon.m; sourceTree = "<group>"; };
 		6D9F647816E36074009E761E /* stages.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = stages.zip; sourceTree = "<group>"; };
+		6DA26B0016E8E56800FFB901 /* Stage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage.h; sourceTree = "<group>"; };
+		6DA26B0116E8E56800FFB901 /* Stage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stage.m; sourceTree = "<group>"; };
 		6DA972B116D854CB00269807 /* Tip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tip.h; sourceTree = "<group>"; };
 		6DA972B216D854CB00269807 /* Tip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tip.m; sourceTree = "<group>"; };
 		6DA972B616D861D900269807 /* FailedLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedLevel.h; sourceTree = "<group>"; };
@@ -1325,6 +1328,8 @@
 			children = (
 				6DBC34AA16D65BDA0028D2E2 /* StageSelect.h */,
 				6DBC34AB16D65BDA0028D2E2 /* StageSelect.m */,
+				6DA26B0016E8E56800FFB901 /* Stage.h */,
+				6DA26B0116E8E56800FFB901 /* Stage.m */,
 			);
 			name = stageSelect;
 			sourceTree = "<group>";
@@ -1601,6 +1606,7 @@
 				6DA972B816D861D900269807 /* FailedLevel.m in Sources */,
 				6DA972BB16D8F7C600269807 /* pauseGame.m in Sources */,
 				6D9F647716E2F69F009E761E /* Ballon.m in Sources */,
+				6DA26B0216E8E56800FFB901 /* Stage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@
 #import "GameCtl.h"
 #import "CCBReader.h"
 
+#import "UserData.h"
 
 @implementation AppController
 
@@ -120,6 +121,8 @@
 
 -(void) applicationDidEnterBackground:(UIApplication*)application
 {
+    [[UserData sharedUserData]saveData];
+    
 	if( [navController_ visibleViewController] == director_ )
 		[director_ stopAnimation];
 }
@@ -133,6 +136,8 @@
 // application will be killed
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    [[UserData sharedUserData]saveData];
+    
 	CC_DIRECTOR_END();
 }
 

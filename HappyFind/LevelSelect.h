@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 __MyCompanyName__. All rights reserved.
 //
 
-#include "CCLayer.h"
+#include "cocos2d.h"
 
 @class CCNode;
 @class CCScrollLayer;
@@ -21,7 +21,5 @@
 
 @property(nonatomic,assign) int m_stageNo;
 
--(void)initGameIcons:(int)stageNo;
--(void)setStageNumber:(int)stageNumber;
--(void)addTip;
+-(void)addBallonsByStageNo:(int)stageNo;
 @end
