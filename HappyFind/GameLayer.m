@@ -12,6 +12,7 @@
 #import "sprite+texture.h"
 #import "CCBReader.h"
 #import "AppDelegate.h"
+
 @implementation CCAnimation(Helper)
 +(CCAnimation*) animationWithFile:(NSString*)name frameCount:(int)frameCount delay:(float)delay
 {
@@ -126,183 +127,11 @@
     [self removeChild:m_readGoLayer cleanup:YES];
     
 }
--(void) hideWaitingRoom
-{
-    m_roomBg.visible = NO;
-}
-
--(void) initPlayingRoom
-{
-    m_playerStatusNodeRoot.visible = YES;
-    
-    m_photoNodeRoot.visible = YES;
-    
-    [self randStateAndLevel];
-    [self drawPhoto];
-    [self drawAnswersWithRandFlag:YES];
-}
-
--(void) startGame:(id)sender
-{
-    NSArray*    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString*   docPath = [paths objectAtIndex:0];
-    NSString*   tmp = [docPath stringByAppendingPathComponent:@"ccb"];
-    [m_key1 setTextureWithFile:[tmp stringByAppendingPathComponent:@"key.png"]];
-    [m_key2 setTextureWithFile:[tmp stringByAppendingPathComponent:@"key.png"]];
-    [m_key3 setTextureWithFile:[tmp stringByAppendingPathComponent:@"key.png"]];
-    [m_key4 setTextureWithFile:[tmp stringByAppendingPathComponent:@"key.png"]];
-    [m_key5 setTextureWithFile:[tmp stringByAppendingPathComponent:@"key.png"]];
-    
-    //1:hide waiting room
-    [self hideWaitingRoom];
-    
-    //2:init playing room
-    [self initPlayingRoom];
-}
-
--(void) initWaitingRoom
-{
-    [self startGame:nil];
-    
-    //player info
-    int iNumOfPlayer=2;
-    BOOL bIsMale1 = FALSE;
-    BOOL bIsMale2 = FALSE;
-    int  bgP1 = 1;
-    int  bgP2 = 2;
-    NSString* titleP1 = @"player1";
-    NSString* tilteP2 = @"player2";
-    //
-    
-    m_player1.visible = FALSE;
-    m_player2.visible = FALSE;
-    m_player3.visible = FALSE;
-    m_player4.visible = FALSE;
-    switch (iNumOfPlayer) 
-    {
-            
-        case 4:
-            m_player4.visible = TRUE;
-        case 3:
-            m_player3.visible = TRUE;
-        case 2:
-            m_player2.visible = TRUE;
-            if(bIsMale2)
-            {
-                // NSString*  resRoot =  [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"room"];
-                
-            }
-            else 
-            {
-                NSString*  path =  [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"room"];
-                path = [path stringByAppendingPathComponent:@"female-n.png"];
-                [m_player2 setTextureWithFile:path];
-            }
-        case 1:
-            m_player1.visible = TRUE;
-            if(bIsMale1)
-            {
-                // NSString*  resRoot =  [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"room"];
-                
-            }
-            else 
-            {
-                NSString*  path =  [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"room"];
-                path = [path stringByAppendingPathComponent:@"female-n.png"];
-                [m_player1 setTextureWithFile:path];
-            }
-            switch (bgP1) {
-                case 0:
-                {
-                    NSString*  path =  [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"room"];
-                    path = [path stringByAppendingPathComponent:@"1.png"];
-                    [m_bgOfP1 setTextureWithFile:path];
-                    break;
-                }
-                case 1:
-                {
-                    NSString*  path =  [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"room"];
-                    path = [path stringByAppendingPathComponent:@"2.png"];
-                    [m_bgOfP1 setTextureWithFile:path];
-                    break;
-                }
-                case 2:
-                {
-                    NSString*  path =  [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"room"];
-                    path = [path stringByAppendingPathComponent:@"3.png"];
-                    [m_bgOfP1 setTextureWithFile:path];
-                    break;
-                }
-                default:
-                    break;
-            }
-            
-            [m_titleOfP1 setString:titleP1];
-            break;
-        default:
-            m_player1.visible = TRUE;
-            break;
-    }
-}
-
-// This method is called right after the class has been instantiated
-// by CCBReader. Do any additional initiation here. If no extra
-// initialization is needed, leave this method out.
-- (void) didLoadFromCCB
-{
-    //position:(120,0)
-    CCSprite* timeProgress = [[CCSprite alloc]initWithFile:@"time.png"];
-    
-    self.ct = [[CCProgressTimer alloc]initWithSprite:timeProgress];
-    self.ct.percentage = 100;
-    self.ct.type = kCCProgressTimerTypeBar;
-    self.ct.anchorPoint = CGPointMake(0, 0);
-    [self.ct setMidpoint:CGPointMake(0, 0)];
-    [self.ct setBarChangeRate:ccp(1,0)];
-    self.ct.position = CGPointMake(10.0f, 24.0f);
-    [self addChild:self.ct];
-    
-    [self initWaitingRoom];
-
-    
-    [self schedule:@selector(updateBar) interval:0.5];
-    
-}
-- (void) dealloc
-{
-    [self unschedule:@selector(updateBar)];
-    [super dealloc];
-}
-
-- (void)pause
-{
-    self.isTouchEnabled = NO;
-    [self addChild:[CCBReader nodeGraphFromFile:@"pauseGame.ccbi"]];
-    
-    //if (![HappyDifferenceAppDelegate get].paused) {
-	//	[HappyDifferenceAppDelegate get].paused = YES;
-	//	[super onExit];
-	//}
-    
-}
-
-/*-(void) resume
-{
-	if (![AppController get].paused) {
-		return ;
-	}
-	
-    [self.parent removeChild:m_pauseLayer cleanup:YES];
-    
-	[AppDelegate get].paused = NO;
-	[super onEnter];
-}*/
-
 -(void) updateBar
 {
     CCProgressTimer* bar = self.ct;
     bar.percentage--;
-
+    
     if(bar.percentage <= 0)//failed
     {
         bar.percentage = 0;
@@ -319,11 +148,11 @@
         //if(m_openStarNum == [m_starIcon count])
         //{
         //    [self unschedule:@selector(updateBar)];
-            //show pass level
-            //[self nextLevel];
+        //show pass level
+        //[self nextLevel];
         //}
     }
-
+    
 }
 
 - (void) openStar
@@ -336,8 +165,8 @@
     NSArray*    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString*   docPath = [paths objectAtIndex:0];
     NSString*   tmp = [docPath stringByAppendingPathComponent:@"ccb"];
-                       
-    switch (m_iNumOfFind) 
+    
+    switch (m_iNumOfFind)
     {
         case 1:
             //[m_star1 setVisible:YES];
@@ -371,7 +200,7 @@
 }
 - (BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    CGPoint touchLocation = [touch locationInView: [touch view]]; 
+    CGPoint touchLocation = [touch locationInView: [touch view]];
     touchLocation = [[CCDirector sharedDirector] convertToGL:touchLocation];
     
     if(!CGRectContainsPoint(m_touchRectLeft, touchLocation)
@@ -421,8 +250,8 @@
     
 #if 1
     CCMoveBy* moveLeft = [CCMoveBy actionWithDuration:0.05 position:ccp(8,0)];
-    CCMoveBy* moveRight=[CCMoveTo actionWithDuration:0.05 position:ccp(8, 0)];  
-    CCFiniteTimeAction* action= [CCSequence actions:moveLeft,moveRight, nil];  
+    CCMoveBy* moveRight=[CCMoveTo actionWithDuration:0.05 position:ccp(8, 0)];
+    CCFiniteTimeAction* action= [CCSequence actions:moveLeft,moveRight, nil];
     CCActionInterval* actionShake = [CCRepeat actionWithAction:action times:5];
     [self runAction:actionShake];
 #else
@@ -436,4 +265,33 @@
 	
     return YES; //这儿如果返回NO 此次触摸将被忽略
 }
+
+// This method is called right after the class has been instantiated
+// by CCBReader. Do any additional initiation here. If no extra
+// initialization is needed, leave this method out.
+- (void) didLoadFromCCB
+{
+    //position:(120,0)
+    //CCSprite* timeProgress = [[CCSprite alloc]initWithFile:@"time.png"];
+    
+    //self.ct = [[CCProgressTimer alloc]initWithSprite:timeProgress];
+    //self.ct.percentage = 100;
+    //self.ct.type = kCCProgressTimerTypeBar;
+    //self.ct.anchorPoint = CGPointMake(0, 0);
+    //[self.ct setMidpoint:CGPointMake(0, 0)];
+    //[self.ct setBarChangeRate:ccp(1,0)];
+    //self.ct.position = CGPointMake(10.0f, 24.0f);
+    //[self addChild:self.ct];
+    
+    //[self schedule:@selector(updateBar) interval:0.5];
+    
+}
+- (void) dealloc
+{
+    [self unschedule:@selector(updateBar)];
+    [super dealloc];
+}
+
+
+
 @end
