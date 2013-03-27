@@ -45,7 +45,7 @@
     //player info
     NSString*           m_nameOfPlayer1;
     BOOL                m_isMale;
-
+    
     enum
     {
         GAMELAYER_IDLE,

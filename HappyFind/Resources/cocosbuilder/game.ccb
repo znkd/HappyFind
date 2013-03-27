@@ -909,9 +909,9 @@
 						<key>displayName</key>
 						<string>ready</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>m_ready</string>
 						<key>memberVarAssignmentType</key>
-						<integer>0</integer>
+						<integer>1</integer>
 						<key>properties</key>
 						<array>
 							<dict>
@@ -970,8 +970,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 					<dict>
 						<key>baseClass</key>
@@ -983,9 +981,9 @@
 						<key>displayName</key>
 						<string>go</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>m_go</string>
 						<key>memberVarAssignmentType</key>
-						<integer>0</integer>
+						<integer>1</integer>
 						<key>properties</key>
 						<array>
 							<dict>
@@ -1034,14 +1032,6 @@
 							</dict>
 							<dict>
 								<key>name</key>
-								<string>visible</string>
-								<key>type</key>
-								<string>Check</string>
-								<key>value</key>
-								<false/>
-							</dict>
-							<dict>
-								<key>name</key>
 								<string>displayFrame</string>
 								<key>type</key>
 								<string>SpriteFrame</string>
@@ -1051,7 +1041,17 @@
 									<string>ui/start.png</string>
 								</array>
 							</dict>
+							<dict>
+								<key>name</key>
+								<string>opacity</string>
+								<key>type</key>
+								<string>Byte</string>
+								<key>value</key>
+								<integer>0</integer>
+							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -1059,9 +1059,9 @@
 				<key>displayName</key>
 				<string>CCLayerColor</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>m_readGoLayer</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>

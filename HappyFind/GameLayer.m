@@ -122,6 +122,7 @@
                          [CCFadeIn actionWithDuration:0.5],[CCFadeOut actionWithDuration:0.5],
                          [CCCallFunc actionWithTarget:self selector:@selector(removeReadyGoLayer)],nil]];
 }
+
 -(void) removeReadyGoLayer
 {
     [self removeChild:m_readGoLayer cleanup:YES];
@@ -284,6 +285,8 @@
     //[self addChild:self.ct];
     
     //[self schedule:@selector(updateBar) interval:0.5];
+    [m_go setOpacity:0];
+    [self drawReadyGoLayer];
     
 }
 - (void) dealloc
